@@ -82,17 +82,17 @@ export const MemoryMatch: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-orange-100/80 via-rose-100/60 to-amber-100/80 dark:from-[#34121d] dark:via-[#2b0c16] dark:to-[#220a12] p-8 rounded-3xl border border-orange-200 dark:border-rose-900/60 shadow-xl space-y-6 text-center">
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="text-xl font-bold font-serif text-stone-900 dark:text-rose-100">
-            Nature Memory Match
+    <div className="bg-gradient-to-br from-[#F7F3E9] via-white to-[#F0EAD9] dark:from-[#0B1F2A] dark:via-[#0A1B25] dark:to-[#081620] p-6 sm:p-8 rounded-3xl border border-[#3FCDA8]/30 shadow-xl space-y-6 text-center text-[#0B1F2A] dark:text-[#F7F3E9] transition-colors">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
+            Nature Memory Match 🌸
           </h3>
-          <p className="text-xs text-stone-600 dark:text-rose-200/80">
-            Match peaceful nature icons at your own calm pace.
+          <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
+            Match peaceful nature icons at your own calm, unhurried pace.
           </p>
         </div>
-        <div className="px-4 py-2 rounded-2xl bg-white dark:bg-[#381420] shadow-sm text-xs font-bold text-orange-700 dark:text-rose-200">
+        <div className="px-4 py-2 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 shadow-sm text-xs font-bold text-[#169375] dark:text-[#3FCDA8] flex-shrink-0">
           Pairs Found: {matches} / {symbols.length}
         </div>
       </div>
@@ -102,31 +102,32 @@ export const MemoryMatch: React.FC = () => {
           <button
             key={card.id}
             onClick={() => handleCardClick(card.id)}
-            className={`h-20 rounded-2xl text-2xl flex items-center justify-center font-bold shadow-md transition-all duration-300 transform ${
+            className={`h-20 sm:h-24 rounded-2xl border-2 text-2xl sm:text-3xl flex items-center justify-center transition-all duration-300 transform cursor-pointer ${
               card.isFlipped || card.isMatched
-                ? 'bg-white dark:bg-[#381420] border-2 border-orange-400 rotate-0'
-                : 'bg-orange-500 dark:bg-rose-900 hover:bg-orange-600 text-white border-2 border-orange-300'
+                ? 'bg-white dark:bg-[#0B1F2A] border-[#3FCDA8] shadow-md scale-102'
+                : 'bg-[#0B1F2A] dark:bg-white text-transparent border-[#3FCDA8]/30 hover:scale-105'
             }`}
           >
-            {card.isFlipped || card.isMatched ? card.symbol : '🌸'}
+            {card.isFlipped || card.isMatched ? card.symbol : '🌿'}
           </button>
         ))}
       </div>
 
       {matches === symbols.length && (
-        <div className="p-4 rounded-2xl bg-orange-100 text-orange-950 text-xs font-bold flex items-center justify-center gap-2">
-          <CheckCircle2 className="w-5 h-5 text-orange-600" />
-          <span>Wonderful memory! You matched all serene pairs!</span>
+        <div className="p-4 rounded-2xl bg-emerald-100 dark:bg-emerald-950/70 border border-emerald-300 dark:border-emerald-700 text-emerald-900 dark:text-emerald-200 text-xs sm:text-sm font-bold flex items-center justify-center gap-2">
+          <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+          <span>Wonderful memory harmony! All nature pairs matched. ✨</span>
         </div>
       )}
 
       <button
         onClick={initGame}
-        className="px-5 py-2.5 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-semibold text-xs shadow-md inline-flex items-center gap-2"
+        className="px-5 py-2.5 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-xs shadow-md inline-flex items-center gap-2 transition-transform active:scale-95"
       >
         <RotateCcw className="w-4 h-4" />
-        <span>Restart Memory Game</span>
+        <span>Restart Match</span>
       </button>
     </div>
   );
 };
+

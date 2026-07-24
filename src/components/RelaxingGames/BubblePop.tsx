@@ -16,11 +16,11 @@ export const BubblePop: React.FC = () => {
   const [score, setScore] = useState(0);
 
   const colors = [
-    'rgba(251, 146, 60, 0.65)',
-    'rgba(244, 114, 182, 0.65)',
-    'rgba(252, 211, 77, 0.65)',
-    'rgba(251, 113, 133, 0.65)',
-    'rgba(253, 186, 116, 0.7)'
+    'rgba(63, 205, 168, 0.75)',  // Aurora Teal
+    'rgba(242, 166, 90, 0.75)',  // Warm Gold
+    'rgba(139, 133, 196, 0.75)', // Soft Lavender
+    'rgba(244, 114, 182, 0.75)', // Blossom Pink
+    'rgba(56, 189, 248, 0.75)'   // Sky Blue
   ];
 
   const generateBubbles = () => {
@@ -53,23 +53,23 @@ export const BubblePop: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-orange-100/80 via-rose-100/60 to-amber-100/80 dark:from-[#34121d] dark:via-[#2b0c16] dark:to-[#220a12] p-8 rounded-3xl border border-orange-200 dark:border-rose-900/60 shadow-xl space-y-6 text-center">
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="text-xl font-bold font-serif text-stone-900 dark:text-rose-100">
-            Bubble Pop Relaxation
+    <div className="bg-gradient-to-br from-[#F7F3E9] via-white to-[#F0EAD9] dark:from-[#0B1F2A] dark:via-[#0A1B25] dark:to-[#081620] p-6 sm:p-8 rounded-3xl border border-[#3FCDA8]/30 shadow-xl space-y-6 text-center text-[#0B1F2A] dark:text-[#F7F3E9] transition-colors">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
+            Bubble Pop Relaxation 🫧
           </h3>
-          <p className="text-xs text-stone-600 dark:text-rose-200/80">
-            Tap bubbles to burst them with gentle popping sounds. No time limit or pressure!
+          <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
+            Tap colorful bubbles to burst them with soothing popping sounds. Zero pressure or timers!
           </p>
         </div>
-        <div className="px-4 py-2 rounded-2xl bg-white dark:bg-[#381420] shadow-sm text-xs font-bold text-orange-700 dark:text-rose-200">
-          Popped: {score}
+        <div className="px-4 py-2 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 shadow-sm text-xs font-bold text-[#169375] dark:text-[#3FCDA8] flex-shrink-0">
+          Popped: {score} 🎈
         </div>
       </div>
 
       {/* Bubble Play Canvas */}
-      <div className="relative w-full h-80 bg-white/70 dark:bg-[#200a12]/60 rounded-3xl border border-orange-200/60 dark:border-rose-900/60 overflow-hidden">
+      <div className="relative w-full h-80 bg-white/80 dark:bg-[#0B1F2A]/80 rounded-3xl border border-[#3FCDA8]/30 overflow-hidden shadow-inner">
         {bubbles.map((b) => (
           <button
             key={b.id}
@@ -83,15 +83,15 @@ export const BubblePop: React.FC = () => {
             }}
             className="absolute rounded-full backdrop-blur-sm border border-white/60 shadow-lg transform hover:scale-110 active:scale-95 transition-transform duration-200 flex items-center justify-center cursor-pointer animate-pulse"
           >
-            <div className="w-3 h-3 rounded-full bg-white/70 absolute top-2 left-2" />
+            <div className="w-3.5 h-3.5 rounded-full bg-white/70 absolute top-2 left-2 pointer-events-none" />
           </button>
         ))}
 
         {bubbles.length === 0 && (
           <div className="absolute inset-0 flex flex-col items-center justify-center space-y-3">
-            <Sparkles className="w-8 h-8 text-amber-500 animate-bounce" />
-            <p className="text-sm font-bold text-slate-700 dark:text-slate-200">
-              All bubbles popped! Re-spawning new bubbles...
+            <Sparkles className="w-8 h-8 text-[#F2A65A] animate-bounce" />
+            <p className="text-sm font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
+              All bubbles popped! Re-spawning fresh bubbles... 🌿
             </p>
           </div>
         )}
@@ -99,11 +99,12 @@ export const BubblePop: React.FC = () => {
 
       <button
         onClick={generateBubbles}
-        className="px-5 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs shadow-md inline-flex items-center gap-2"
+        className="px-5 py-2.5 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-xs shadow-md inline-flex items-center gap-2 transition-transform active:scale-95"
       >
         <RotateCcw className="w-4 h-4" />
-        <span>Reset Bubbles</span>
+        <span>Reset Bubbles ✨</span>
       </button>
     </div>
   );
 };
+

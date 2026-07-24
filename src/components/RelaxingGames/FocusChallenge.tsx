@@ -30,44 +30,45 @@ export const FocusChallenge: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-orange-100/80 via-rose-100/60 to-amber-100/80 dark:from-[#34121d] dark:via-[#2b0c16] dark:to-[#220a12] p-8 rounded-3xl border border-orange-200 dark:border-rose-900/60 shadow-xl space-y-6 text-center">
+    <div className="bg-gradient-to-br from-[#F7F3E9] via-white to-[#F0EAD9] dark:from-[#0B1F2A] dark:via-[#0A1B25] dark:to-[#081620] p-6 sm:p-8 rounded-3xl border border-[#3FCDA8]/30 shadow-xl space-y-6 text-center text-[#0B1F2A] dark:text-[#F7F3E9] transition-colors">
       <div>
-        <h3 className="text-xl font-bold font-serif text-stone-900 dark:text-rose-100">
-          1-Minute Gentle Focus Challenge
+        <h3 className="text-xl sm:text-2xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
+          1-Minute Gentle Focus Challenge 👁️
         </h3>
-        <p className="text-xs text-stone-600 dark:text-rose-200/80">
+        <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
           Softly focus your gaze on the central glowing dot for 60 seconds without multi-tasking.
         </p>
       </div>
 
       <div className="relative w-40 h-40 mx-auto flex items-center justify-center">
         <div
-          className={`w-16 h-16 rounded-full bg-orange-500 shadow-2xl transition-all duration-1000 ${
-            isActive ? 'scale-150 animate-pulse bg-rose-400' : 'scale-100'
+          className={`w-16 h-16 rounded-full bg-[#3FCDA8] shadow-2xl transition-all duration-1000 ${
+            isActive ? 'scale-150 animate-pulse bg-[#F2A65A]' : 'scale-100'
           }`}
         />
       </div>
 
-      <div className="text-3xl font-extrabold font-mono text-orange-900 dark:text-rose-200">
+      <div className="text-3xl sm:text-4xl font-extrabold font-mono text-[#169375] dark:text-[#3FCDA8]">
         {seconds}s
       </div>
 
       {!isActive && !completed && (
         <button
           onClick={handleStart}
-          className="px-6 py-3 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-semibold text-xs shadow-md inline-flex items-center gap-2"
+          className="px-6 py-3 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-xs shadow-md inline-flex items-center gap-2 transition-transform active:scale-95"
         >
-          <Play className="w-4 h-4 fill-white" />
-          <span>Start Focus Timer</span>
+          <Play className="w-4 h-4 fill-[#081620]" />
+          <span>Start Focus Timer ✨</span>
         </button>
       )}
 
       {completed && (
-        <div className="p-4 rounded-2xl bg-emerald-100 text-emerald-900 text-xs font-bold flex items-center justify-center gap-2">
-          <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-          <span>Great focus! Your mind is calm and centered.</span>
+        <div className="p-4 rounded-2xl bg-emerald-100 dark:bg-emerald-950/70 border border-emerald-300 dark:border-emerald-700 text-emerald-900 dark:text-emerald-200 text-xs sm:text-sm font-bold flex items-center justify-center gap-2">
+          <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+          <span>Great focus! Your mind is calm, centered, and still. 🌿</span>
         </div>
       )}
     </div>
   );
 };
+

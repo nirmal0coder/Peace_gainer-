@@ -4,11 +4,11 @@ import {
   CheckCircle2, Info, ChevronRight, Volume2, ShieldCheck, Flame, Sun, Moon
 } from 'lucide-react';
 
-// Import generated yoga pose image assets
-import forwardBendImg from '../assets/images/yoga_forward_bend_1784745264923.jpg';
-import cobraImg from '../assets/images/yoga_cobra_pose_1784745278711.jpg';
-import legsUpWallImg from '../assets/images/yoga_legs_up_wall_1784745291944.jpg';
-import childPoseImg from '../assets/images/yoga_child_pose_1784745314009.jpg';
+// Yoga pose high quality visual references
+const forwardBendImg = 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80';
+const cobraImg = 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80';
+const legsUpWallImg = 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80';
+const childPoseImg = 'https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&fit=crop&w=800&q=80';
 
 interface YogaPose {
   id: string;
@@ -320,69 +320,69 @@ export const YogaDepression: React.FC = () => {
   };
 
   return (
-    <section id="yoga" className="py-12 sm:py-20 bg-gradient-to-b from-amber-50/40 via-white to-rose-50/30 dark:from-[#2a0e17] dark:via-[#220a12] dark:to-[#1f070e] transition-colors duration-300">
+    <section id="yoga" className="py-12 sm:py-20 bg-gradient-to-b from-[#F7F3E9] via-white to-[#F0EAD9] dark:from-[#0B1F2A] dark:via-[#0A1B25] dark:to-[#081620] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Main Section Banner */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-200 text-xs font-bold uppercase tracking-wider border border-rose-300 dark:border-rose-800 shadow-sm">
-            <Activity className="w-4 h-4 text-rose-500 animate-pulse" />
-            <span>Mind-Body Healing & Recovery</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-[#0F2836] text-[#169375] dark:text-[#3FCDA8] text-xs font-bold uppercase tracking-wider border border-[#3FCDA8]/30 shadow-sm">
+            <Activity className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8] animate-pulse" />
+            <span>Mind-Body Healing & Yoga Recovery 🧘‍♀️</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-serif bg-gradient-to-r from-orange-600 via-rose-600 to-amber-600 dark:from-orange-300 dark:via-rose-300 dark:to-amber-300 bg-clip-text text-transparent">
-            Yoga for Overcoming Depression
+          <h2 className="text-3xl sm:text-5xl font-extrabold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
+            Yoga for Overcoming Depression 🧘‍♂️✨
           </h2>
 
-          <p className="text-sm sm:text-base text-stone-700 dark:text-rose-200/90 leading-relaxed">
-            Discover scientifically backed Yoga Asanas (poses), breathing practices, and restorative routines specifically designed to regulate stress hormones, increase serotonin & GABA neurotransmitters, and restore inner peace.
+          <p className="text-sm sm:text-base text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
+            Discover scientifically backed Yoga Asanas (poses), breathing practices 🫁, and restorative routines specifically designed to regulate stress hormones, boost serotonin & GABA 🧬, and restore deep inner peace 🕊️.
           </p>
         </div>
 
         {/* Science Box: How Yoga Combats Depression */}
-        <div className="bg-white/90 dark:bg-[#34121d] p-6 sm:p-8 rounded-3xl border border-orange-200/80 dark:border-rose-900/60 shadow-xl space-y-6">
-          <div className="flex items-center gap-3 border-b border-orange-100 dark:border-rose-900/40 pb-4">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-orange-400 to-rose-500 flex items-center justify-center text-white shadow-md">
-              <Sparkles className="w-5 h-5" />
+        <div className="bg-white dark:bg-[#0F2836] p-6 sm:p-8 rounded-3xl border border-[#3FCDA8]/30 shadow-xl space-y-6">
+          <div className="flex items-center gap-3 border-b border-[#3FCDA8]/20 pb-4">
+            <div className="w-10 h-10 rounded-2xl bg-[#3FCDA8] text-[#081620] flex items-center justify-center font-bold text-lg shadow-md">
+              🧠
             </div>
             <div>
-              <h3 className="text-xl font-bold font-serif text-stone-900 dark:text-rose-100">
-                How Yoga Helps Overcome Depression (Neurobiological Science)
+              <h3 className="text-xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
+                How Yoga Helps Overcome Depression (Neurobiological Science 🔬)
               </h3>
-              <p className="text-xs text-stone-500 dark:text-rose-300/80">
-                Neuroscience backing the therapeutic power of mind-body movement
+              <p className="text-xs text-[#1C2D37]/70 dark:text-[#F7F3E9]/70">
+                Neuroscience backing the therapeutic power of mind-body movement 🌿
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
-            <div className="p-4 rounded-2xl bg-orange-50/70 dark:bg-[#3d1624] border border-orange-200/60 dark:border-rose-800/50 space-y-2">
-              <div className="flex items-center gap-2 font-bold text-orange-900 dark:text-orange-200">
-                <Flame className="w-4 h-4 text-orange-500" />
-                <span>Lowers Cortisol & Inflammation</span>
+            <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-2">
+              <div className="flex items-center gap-2 font-bold text-[#0B1F2A] dark:text-[#F2A65A]">
+                <Flame className="w-4 h-4 text-[#F2A65A]" />
+                <span>Lowers Cortisol & Inflammation 🔥</span>
               </div>
-              <p className="text-stone-600 dark:text-rose-200/80 leading-relaxed">
-                Chronic depression keeps the body locked in high cortisol state. Gentle yoga postures lower systemic cortisol, easing nervous exhaustion and physical fatigue.
+              <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
+                Chronic depression keeps the body locked in high cortisol state ⚡. Gentle yoga postures lower systemic cortisol, easing nervous exhaustion and physical fatigue.
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-rose-50/70 dark:bg-[#3d1624] border border-rose-200/60 dark:border-rose-800/50 space-y-2">
-              <div className="flex items-center gap-2 font-bold text-rose-900 dark:text-rose-200">
+            <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-2">
+              <div className="flex items-center gap-2 font-bold text-[#0B1F2A] dark:text-[#3FCDA8]">
                 <Heart className="w-4 h-4 text-rose-500" />
-                <span>Boosts GABA & Brain Serotonin</span>
+                <span>Boosts GABA & Brain Serotonin 💖</span>
               </div>
-              <p className="text-stone-600 dark:text-rose-200/80 leading-relaxed">
-                Clinical studies reveal a 27% increase in brain GABA levels after a single 60-minute yoga session, directly reducing anxiety and lifting low mood.
+              <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
+                Clinical studies reveal a 27% increase in brain GABA levels after a single 60-minute yoga session 🧘, directly reducing anxiety and lifting low mood.
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-amber-50/70 dark:bg-[#3d1624] border border-amber-200/60 dark:border-rose-800/50 space-y-2">
-              <div className="flex items-center gap-2 font-bold text-amber-900 dark:text-amber-200">
-                <ShieldCheck className="w-4 h-4 text-amber-500" />
-                <span>Stimulates Vagus Nerve</span>
+            <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-2">
+              <div className="flex items-center gap-2 font-bold text-[#0B1F2A] dark:text-[#8B85C4]">
+                <ShieldCheck className="w-4 h-4 text-[#8B85C4]" />
+                <span>Stimulates Vagus Nerve 🛡️</span>
               </div>
-              <p className="text-stone-600 dark:text-rose-200/80 leading-relaxed">
-                Rhythmic yoga movement and deep breathing activate the vagus nerve, shifting the brain from "fight-or-flight" panic into parasympathetic healing.
+              <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
+                Rhythmic yoga movement and deep breathing activate the vagus nerve 🌊, shifting the brain from "fight-or-flight" panic into parasympathetic healing.
               </p>
             </div>
           </div>
@@ -396,11 +396,11 @@ export const YogaDepression: React.FC = () => {
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-sm ${
                 selectedCategory === cat
-                  ? 'bg-gradient-to-r from-orange-500 via-rose-500 to-amber-500 text-white shadow-md scale-105'
-                  : 'bg-white dark:bg-[#34121d] text-stone-700 dark:text-rose-200 hover:bg-orange-50 dark:hover:bg-[#401726] border border-orange-200/60 dark:border-rose-900/60'
+                  ? 'bg-[#3FCDA8] text-[#081620] shadow-md scale-105'
+                  : 'bg-white dark:bg-[#0F2836] text-[#0B1F2A] dark:text-[#F7F3E9] hover:bg-[#EAE4D3] dark:hover:bg-[#143345] border border-[#3FCDA8]/30'
               }`}
             >
-              {cat === 'All' ? '✨ All Anti-Depression Poses' : cat}
+              {cat === 'All' ? '✨ All Anti-Depression Poses 🧘' : `${cat}`}
             </button>
           ))}
         </div>
@@ -410,37 +410,37 @@ export const YogaDepression: React.FC = () => {
           {filteredPoses.map((pose) => (
             <div
               key={pose.id}
-              className="bg-white dark:bg-[#32121e] rounded-3xl border border-orange-200/80 dark:border-rose-900/60 shadow-xl overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300"
+              className="bg-white dark:bg-[#0F2836] rounded-3xl border border-[#3FCDA8]/30 shadow-xl overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-300"
             >
               {/* Pose Header & Picture */}
-              <div className="relative h-64 sm:h-72 w-full bg-stone-100 dark:bg-[#200a12] overflow-hidden">
+              <div className="relative h-64 sm:h-72 w-full bg-[#EAE4D3] dark:bg-[#0B1F2A] overflow-hidden">
                 <img
                   src={pose.image}
                   alt={pose.imageAlt}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F2A]/90 via-[#0B1F2A]/30 to-transparent" />
                 
                 {/* Pose Tag & Sanskrit Name Badge */}
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-                  <span className="px-3 py-1 rounded-full bg-white/90 dark:bg-[#200a12]/90 backdrop-blur-md text-orange-950 dark:text-rose-200 text-xs font-bold border border-orange-200 shadow-sm">
-                    {pose.category}
+                  <span className="px-3 py-1 rounded-full bg-white/90 dark:bg-[#0B1F2A]/90 backdrop-blur-md text-[#0B1F2A] dark:text-[#F7F3E9] text-xs font-bold border border-[#3FCDA8]/30 shadow-sm">
+                    {pose.category} 🌸
                   </span>
-                  <span className="px-3 py-1 rounded-full bg-rose-500/90 text-white text-xs font-bold shadow-sm">
+                  <span className="px-3 py-1 rounded-full bg-[#3FCDA8] text-[#081620] text-xs font-bold shadow-sm">
                     ⏱️ {pose.holdDurationSeconds}s hold
                   </span>
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 text-white space-y-0.5">
-                  <span className="text-xs font-mono font-bold text-amber-300 uppercase tracking-widest block">
-                    {pose.sanskritName}
+                  <span className="text-xs font-mono font-bold text-[#F2A65A] uppercase tracking-widest block">
+                    🧘 {pose.sanskritName}
                   </span>
-                  <h3 className="text-2xl font-bold font-serif">
+                  <h3 className="text-2xl font-bold font-serif text-[#F7F3E9]">
                     {pose.englishName}
                   </h3>
-                  <p className="text-xs text-rose-100/90 font-medium italic">
-                    {pose.tag}
+                  <p className="text-xs text-[#3FCDA8] font-medium italic">
+                    ✨ {pose.tag}
                   </p>
                 </div>
               </div>
@@ -449,25 +449,25 @@ export const YogaDepression: React.FC = () => {
               <div className="p-6 space-y-6 flex-1 flex flex-col justify-between">
                 
                 {/* Why It Helps Depression */}
-                <div className="p-4 rounded-2xl bg-orange-50/70 dark:bg-[#3d1624]/60 border border-orange-200/60 dark:border-rose-900/40 space-y-1.5">
-                  <div className="flex items-center gap-2 font-bold text-xs uppercase tracking-wider text-orange-900 dark:text-amber-200">
-                    <Info className="w-4 h-4 text-orange-500" />
-                    <span>How It Relieves Depression:</span>
+                <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1.5">
+                  <div className="flex items-center gap-2 font-bold text-xs uppercase tracking-wider text-[#169375] dark:text-[#3FCDA8]">
+                    <Info className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" />
+                    <span>How It Relieves Depression 🧬:</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-stone-700 dark:text-rose-200/90 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#1C2D37] dark:text-[#F7F3E9]/90 leading-relaxed">
                     {pose.depressionReliefMechanism}
                   </p>
                 </div>
 
                 {/* Key Benefits List */}
                 <div className="space-y-2">
-                  <h4 className="text-xs font-bold text-stone-800 dark:text-rose-200 uppercase tracking-wider">
-                    Key Health & Emotional Benefits:
+                  <h4 className="text-xs font-bold text-[#0B1F2A] dark:text-[#F7F3E9] uppercase tracking-wider flex items-center gap-1">
+                    <span>Key Health & Emotional Benefits 💖:</span>
                   </h4>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-700 dark:text-rose-200/90">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#1C2D37]/90 dark:text-[#F7F3E9]/90">
                     {pose.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-[#3FCDA8] flex-shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -475,20 +475,20 @@ export const YogaDepression: React.FC = () => {
                 </div>
 
                 {/* Step-by-Step Interactive Procedure */}
-                <div className="space-y-3 pt-2 border-t border-orange-100 dark:border-rose-900/40">
+                <div className="space-y-3 pt-2 border-t border-[#3FCDA8]/20">
                   <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-bold text-stone-800 dark:text-rose-200 uppercase tracking-wider">
-                      Step-by-Step Procedure:
+                    <h4 className="text-xs font-bold text-[#0B1F2A] dark:text-[#F7F3E9] uppercase tracking-wider">
+                      Step-by-Step Procedure 👣:
                     </h4>
-                    <span className="text-[11px] font-semibold text-orange-600 dark:text-rose-300">
-                      {pose.procedure.length} Simple Steps
+                    <span className="text-[11px] font-semibold text-[#169375] dark:text-[#3FCDA8]">
+                      {pose.procedure.length} Easy Steps 🌿
                     </span>
                   </div>
 
-                  <ol className="space-y-2 text-xs sm:text-sm text-stone-700 dark:text-rose-200/90">
+                  <ol className="space-y-2 text-xs sm:text-sm text-[#1C2D37]/90 dark:text-[#F7F3E9]/90">
                     {pose.procedure.map((step, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-orange-50/50 dark:hover:bg-[#3a1523]/50 transition-colors">
-                        <span className="w-5 h-5 rounded-lg bg-orange-100 dark:bg-rose-950 text-orange-900 dark:text-rose-200 font-bold text-xs flex items-center justify-center flex-shrink-0">
+                      <li key={idx} className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-[#F7F3E9] dark:hover:bg-[#0B1F2A] transition-colors">
+                        <span className="w-5 h-5 rounded-lg bg-[#3FCDA8]/20 text-[#169375] dark:text-[#3FCDA8] font-bold text-xs flex items-center justify-center flex-shrink-0">
                           {idx + 1}
                         </span>
                         <span className="leading-relaxed">{step}</span>
@@ -499,33 +499,33 @@ export const YogaDepression: React.FC = () => {
 
                 {/* Breathing & Precautions */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-2">
-                  <div className="p-3 rounded-xl bg-amber-50/60 dark:bg-[#3a1523] border border-amber-200/60 dark:border-rose-900/40 space-y-1">
-                    <span className="font-bold text-amber-900 dark:text-amber-200 flex items-center gap-1">
-                      <Volume2 className="w-3.5 h-3.5 text-amber-500" /> Breathing:
+                  <div className="p-3 rounded-xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
+                    <span className="font-bold text-[#0B1F2A] dark:text-[#F2A65A] flex items-center gap-1">
+                      <Volume2 className="w-3.5 h-3.5 text-[#F2A65A]" /> Breathing Guidance 🫁:
                     </span>
-                    <p className="text-stone-600 dark:text-rose-200/80">{pose.breathingGuidance}</p>
+                    <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">{pose.breathingGuidance}</p>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-rose-50/60 dark:bg-[#3a1523] border border-rose-200/60 dark:border-rose-900/40 space-y-1">
-                    <span className="font-bold text-rose-900 dark:text-rose-200 flex items-center gap-1">
-                      <ShieldCheck className="w-3.5 h-3.5 text-rose-500" /> Caution / Note:
+                  <div className="p-3 rounded-xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
+                    <span className="font-bold text-[#0B1F2A] dark:text-[#3FCDA8] flex items-center gap-1">
+                      <ShieldCheck className="w-3.5 h-3.5 text-[#3FCDA8]" /> Caution / Note 🛡️:
                     </span>
-                    <p className="text-stone-600 dark:text-rose-200/80">{pose.precautions}</p>
+                    <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">{pose.precautions}</p>
                   </div>
                 </div>
 
                 {/* Practice Pose Interactive Timer Bar */}
                 <div className="pt-3">
                   {activeTimerPoseId === pose.id ? (
-                    <div className="p-4 rounded-2xl bg-gradient-to-r from-orange-500 via-rose-500 to-amber-500 text-white space-y-3 shadow-md animate-fadeIn">
+                    <div className="p-4 rounded-2xl bg-[#3FCDA8] text-[#081620] space-y-3 shadow-md animate-fadeIn">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <Clock className="w-5 h-5 text-amber-200 animate-spin" />
+                          <Clock className="w-5 h-5 text-[#081620] animate-spin" />
                           <span className="font-bold text-xs uppercase tracking-wider">
-                            Practicing {pose.englishName}
+                            Practicing {pose.englishName} 🧘
                           </span>
                         </div>
-                        <span className="text-2xl font-black font-mono tracking-widest bg-white/20 px-3 py-1 rounded-xl">
+                        <span className="text-2xl font-black font-mono tracking-widest bg-[#081620]/20 px-3 py-1 rounded-xl text-[#081620]">
                           {formatTime(timeLeft)}
                         </span>
                       </div>
@@ -533,14 +533,14 @@ export const YogaDepression: React.FC = () => {
                       <div className="flex items-center gap-2">
                         <button
                           onClick={toggleTimer}
-                          className="flex-1 py-2 rounded-xl bg-white text-rose-900 font-bold text-xs hover:bg-orange-50 flex items-center justify-center gap-1.5 shadow-sm"
+                          className="flex-1 py-2 rounded-xl bg-[#081620] text-white font-bold text-xs hover:bg-[#081620]/80 flex items-center justify-center gap-1.5 shadow-sm"
                         >
-                          {isTimerRunning ? <Pause className="w-4 h-4 text-rose-600" /> : <Play className="w-4 h-4 text-emerald-600" />}
-                          <span>{isTimerRunning ? 'Pause' : 'Resume'}</span>
+                          {isTimerRunning ? <Pause className="w-4 h-4 text-amber-300" /> : <Play className="w-4 h-4 text-[#3FCDA8]" />}
+                          <span>{isTimerRunning ? 'Pause ⏸️' : 'Resume ▶️'}</span>
                         </button>
                         <button
                           onClick={() => resetTimer(pose.holdDurationSeconds)}
-                          className="px-3 py-2 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs"
+                          className="px-3 py-2 rounded-xl bg-[#081620]/20 hover:bg-[#081620]/30 text-[#081620] font-bold text-xs"
                           title="Reset Timer"
                         >
                           <RotateCcw className="w-4 h-4" />
@@ -550,10 +550,10 @@ export const YogaDepression: React.FC = () => {
                   ) : (
                     <button
                       onClick={() => startPoseTimer(pose)}
-                      className="w-full py-3 rounded-2xl bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white font-bold text-xs shadow-md flex items-center justify-center gap-2 transition-transform transform active:scale-98"
+                      className="w-full py-3 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-xs shadow-md flex items-center justify-center gap-2 transition-transform transform active:scale-98"
                     >
-                      <Play className="w-4 h-4 fill-white" />
-                      <span>Start Guided Hold Timer ({pose.holdDurationSeconds}s)</span>
+                      <Play className="w-4 h-4 fill-[#081620]" />
+                      <span>Start Guided Hold Timer ({pose.holdDurationSeconds}s) ⏱️</span>
                     </button>
                   )}
                 </div>
@@ -564,109 +564,109 @@ export const YogaDepression: React.FC = () => {
         </div>
 
         {/* Pranayama Breathing Section */}
-        <div className="bg-white/90 dark:bg-[#34121d] p-6 sm:p-10 rounded-3xl border border-orange-200/80 dark:border-rose-900/60 shadow-xl space-y-6">
+        <div className="bg-white dark:bg-[#0F2836] p-6 sm:p-10 rounded-3xl border border-[#3FCDA8]/30 shadow-xl space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 dark:bg-rose-950 text-amber-900 dark:text-rose-200 text-xs font-bold uppercase tracking-wider">
-              <Sun className="w-4 h-4 text-amber-500" />
-              <span>Pranayama Healing Breathwork</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3FCDA8]/20 text-[#169375] dark:text-[#3FCDA8] text-xs font-bold uppercase tracking-wider">
+              <Sun className="w-4 h-4 text-[#F2A65A]" />
+              <span>Pranayama Healing Breathwork 🫁✨</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold font-serif text-stone-900 dark:text-rose-100">
-              3 Powerful Breathing Techniques for Depression
+            <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
+              3 Powerful Breathing Techniques for Depression 🌿
             </h3>
-            <p className="text-xs sm:text-sm text-stone-600 dark:text-rose-200/80">
-              Pranayama breath control directly regulates autonomic brain rhythms and calms overstimulated nervous pathways.
+            <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
+              Pranayama breath control directly regulates autonomic brain rhythms and calms overstimulated nervous pathways 🕊️.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
-            <div className="p-5 rounded-2xl bg-orange-50/70 dark:bg-[#3d1624] border border-orange-200/60 dark:border-rose-900/40 space-y-3">
-              <div className="flex items-center gap-2 font-bold text-orange-950 dark:text-rose-100">
-                <span className="w-7 h-7 rounded-xl bg-orange-500 text-white flex items-center justify-center font-bold">1</span>
-                <span>Anulom Vilom (Alternate Nostril)</span>
+            <div className="p-5 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-3">
+              <div className="flex items-center gap-2 font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
+                <span className="w-7 h-7 rounded-xl bg-[#3FCDA8] text-[#081620] flex items-center justify-center font-bold">1</span>
+                <span>Anulom Vilom (Alternate Nostril) 🧘‍♀️</span>
               </div>
-              <p className="text-stone-600 dark:text-rose-200/80 leading-relaxed">
+              <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
                 Balancing right and left brain hemispheres. Inhale through left nostril (4s), exhale through right (4s), then inhale right and exhale left. Repeat for 5 minutes.
               </p>
-              <div className="text-[11px] font-bold text-orange-700 dark:text-amber-300">
-                ✨ Benefit: Calms anxiety & restores cognitive balance
+              <div className="text-[11px] font-bold text-[#169375] dark:text-[#3FCDA8]">
+                ✨ Benefit: Calms anxiety & restores cognitive balance 🧠
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-rose-50/70 dark:bg-[#3d1624] border border-rose-200/60 dark:border-rose-900/40 space-y-3">
-              <div className="flex items-center gap-2 font-bold text-rose-950 dark:text-rose-100">
-                <span className="w-7 h-7 rounded-xl bg-rose-500 text-white flex items-center justify-center font-bold">2</span>
-                <span>Bhramari (Humming Bee Breath)</span>
+            <div className="p-5 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-3">
+              <div className="flex items-center gap-2 font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
+                <span className="w-7 h-7 rounded-xl bg-[#F2A65A] text-[#081620] flex items-center justify-center font-bold">2</span>
+                <span>Bhramari (Humming Bee Breath) 🐝</span>
               </div>
-              <p className="text-stone-600 dark:text-rose-200/80 leading-relaxed">
+              <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
                 Inhale deeply, gently place thumbs on ears and fingers over eyes. Exhale slowly making a low humming bee sound in your throat. Repeat 7–10 times.
               </p>
-              <div className="text-[11px] font-bold text-rose-700 dark:text-rose-300">
-                ✨ Benefit: Releases brain stress & tension headaches
+              <div className="text-[11px] font-bold text-[#F2A65A]">
+                ✨ Benefit: Releases brain stress & tension headaches 🌸
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-amber-50/70 dark:bg-[#3d1624] border border-amber-200/60 dark:border-rose-900/40 space-y-3">
-              <div className="flex items-center gap-2 font-bold text-amber-950 dark:text-rose-100">
-                <span className="w-7 h-7 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold">3</span>
-                <span>Diaphragmatic Belly Breathing</span>
+            <div className="p-5 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-3">
+              <div className="flex items-center gap-2 font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
+                <span className="w-7 h-7 rounded-xl bg-[#8B85C4] text-white flex items-center justify-center font-bold">3</span>
+                <span>Diaphragmatic Belly Breathing 🎈</span>
               </div>
-              <p className="text-stone-600 dark:text-rose-200/80 leading-relaxed">
+              <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
                 Place one hand on chest and one on belly. Inhale through nose allowing belly to expand outward like a balloon, exhale allowing belly to gently sink.
               </p>
-              <div className="text-[11px] font-bold text-amber-700 dark:text-amber-300">
-                ✨ Benefit: Activates parasympathetic deep relaxation
+              <div className="text-[11px] font-bold text-[#8B85C4]">
+                ✨ Benefit: Activates parasympathetic deep relaxation 🌊
               </div>
             </div>
           </div>
         </div>
 
         {/* 15-Minute Daily Anti-Depression Routine Flow */}
-        <div className="bg-gradient-to-r from-orange-500 via-rose-500 to-amber-500 text-white p-6 sm:p-10 rounded-3xl shadow-2xl space-y-6">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-white/20 pb-6">
+        <div className="bg-[#0F2836] border border-[#3FCDA8]/40 text-[#F7F3E9] p-6 sm:p-10 rounded-3xl shadow-2xl space-y-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-[#3FCDA8]/20 pb-6">
             <div>
-              <span className="text-xs font-mono font-bold text-amber-200 uppercase tracking-widest block">
-                Recommended Daily Practice
+              <span className="text-xs font-mono font-bold text-[#F2A65A] uppercase tracking-widest block">
+                Recommended Daily Practice ☀️
               </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold font-serif">
-                15-Minute Anti-Depression Daily Flow
+              <h3 className="text-2xl sm:text-3xl font-extrabold font-serif text-[#F7F3E9]">
+                15-Minute Anti-Depression Daily Flow 🧘‍♂️
               </h3>
-              <p className="text-xs sm:text-sm text-rose-100 mt-1">
-                Follow this simple daily sequence every morning or whenever emotional exhaustion sets in.
+              <p className="text-xs sm:text-sm text-[#F7F3E9]/80 mt-1">
+                Follow this simple daily sequence every morning or whenever emotional exhaustion sets in 🕊️.
               </p>
             </div>
 
             <a
               href="#aichat"
-              className="px-5 py-3 rounded-2xl bg-white text-rose-900 font-bold text-xs hover:bg-orange-50 transition-all shadow-md flex items-center gap-2"
+              className="px-5 py-3 rounded-2xl bg-[#3FCDA8] text-[#081620] font-bold text-xs hover:bg-[#33b895] transition-all shadow-md flex items-center gap-2"
             >
-              <Sparkles className="w-4 h-4 text-orange-500" />
-              <span>Talk to AI Assistant About Routine</span>
+              <Sparkles className="w-4 h-4 text-[#081620]" />
+              <span>Talk to Peace AI Bot 🤖</span>
             </a>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs font-medium">
-            <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 space-y-1">
-              <span className="text-amber-200 font-mono font-bold text-[11px]">00:00 - 03:00 (3 mins)</span>
-              <h4 className="font-bold text-sm text-white">1. Balasana (Child Pose)</h4>
-              <p className="text-rose-100 text-[11px]">Grounding & calming immediate panic and anxiety.</p>
+            <div className="p-4 rounded-2xl bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
+              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">00:00 - 03:00 (3 mins) ⏱️</span>
+              <h4 className="font-bold text-sm text-[#F7F3E9]">1. Balasana (Child Pose) 👶</h4>
+              <p className="text-[#F7F3E9]/70 text-[11px]">Grounding & calming immediate panic and anxiety.</p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 space-y-1">
-              <span className="text-amber-200 font-mono font-bold text-[11px]">03:00 - 07:00 (4 mins)</span>
-              <h4 className="font-bold text-sm text-white">2. Bhujangasana & Crescent Lunge</h4>
-              <p className="text-rose-100 text-[11px]">Heart opening, chest expansion & energizing body.</p>
+            <div className="p-4 rounded-2xl bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
+              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">03:00 - 07:00 (4 mins) ⏱️</span>
+              <h4 className="font-bold text-sm text-[#F7F3E9]">2. Cobra & Crescent Lunge 🐍</h4>
+              <p className="text-[#F7F3E9]/70 text-[11px]">Heart opening, chest expansion & energizing body.</p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 space-y-1">
-              <span className="text-amber-200 font-mono font-bold text-[11px]">07:00 - 11:00 (4 mins)</span>
-              <h4 className="font-bold text-sm text-white">3. Viparita Karani (Legs Up Wall)</h4>
-              <p className="text-rose-100 text-[11px]">Restorative inversion lowering systemic stress.</p>
+            <div className="p-4 rounded-2xl bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
+              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">07:00 - 11:00 (4 mins) ⏱️</span>
+              <h4 className="font-bold text-sm text-[#F7F3E9]">3. Viparita Karani (Legs Up Wall) 🧱</h4>
+              <p className="text-[#F7F3E9]/70 text-[11px]">Restorative inversion lowering systemic stress.</p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 space-y-1">
-              <span className="text-amber-200 font-mono font-bold text-[11px]">11:00 - 15:00 (4 mins)</span>
-              <h4 className="font-bold text-sm text-white">4. Savasana & Pranayama</h4>
-              <p className="text-rose-100 text-[11px]">Deep neural integration and alternate nostril breathing.</p>
+            <div className="p-4 rounded-2xl bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
+              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">11:00 - 15:00 (4 mins) ⏱️</span>
+              <h4 className="font-bold text-sm text-[#F7F3E9]">4. Savasana & Pranayama 🌊</h4>
+              <p className="text-[#F7F3E9]/70 text-[11px]">Deep neural integration and alternate nostril breathing.</p>
             </div>
           </div>
         </div>

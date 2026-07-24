@@ -4,11 +4,11 @@ import { audioSynth } from '../../utils/audioSynth';
 
 export const MandalaColoring: React.FC = () => {
   const [colors, setColors] = useState<Record<string, string>>({});
-  const [selectedPalette, setSelectedPalette] = useState('#34D399');
+  const [selectedPalette, setSelectedPalette] = useState('#3FCDA8');
 
   const palette = [
-    '#34D399', '#38BDF8', '#A78BFA', '#F472B6', '#FBBF24',
-    '#60A5FA', '#F43F5E', '#10B981', '#818CF8', '#F471B5'
+    '#3FCDA8', '#F2A65A', '#8B85C4', '#F472B6', '#38BDF8',
+    '#34D399', '#FB7185', '#FBBF24', '#A78BFA', '#818CF8'
   ];
 
   const handlePetalClick = (petalId: string) => {
@@ -21,19 +21,19 @@ export const MandalaColoring: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-orange-100/80 via-rose-100/60 to-amber-100/80 dark:from-[#34121d] dark:via-[#2b0c16] dark:to-[#220a12] p-8 rounded-3xl border border-orange-200 dark:border-rose-900/60 shadow-xl space-y-6 text-center">
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="text-xl font-bold font-serif text-stone-900 dark:text-rose-100">
-            Mandala Pastel Coloring
+    <div className="bg-gradient-to-br from-[#F7F3E9] via-white to-[#F0EAD9] dark:from-[#0B1F2A] dark:via-[#0A1B25] dark:to-[#081620] p-6 sm:p-8 rounded-3xl border border-[#3FCDA8]/30 shadow-xl space-y-6 text-center text-[#0B1F2A] dark:text-[#F7F3E9] transition-colors">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
+            Mandala Pastel Coloring 💫
           </h3>
-          <p className="text-xs text-stone-600 dark:text-rose-200/80">
-            Select a soothing pastel color and tap petals to color your mandala.
+          <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
+            Select a soothing color below and tap any petal to paint your peaceful mandala.
           </p>
         </div>
         <button
           onClick={resetColoring}
-          className="px-4 py-2 rounded-2xl bg-white dark:bg-[#381420] shadow-sm text-xs font-bold text-orange-700 dark:text-rose-200 flex items-center gap-1.5"
+          className="px-4 py-2 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 shadow-sm text-xs font-bold text-[#169375] dark:text-[#3FCDA8] flex items-center gap-1.5 flex-shrink-0"
         >
           <RotateCcw className="w-3.5 h-3.5" /> Reset Mandala
         </button>
@@ -46,17 +46,17 @@ export const MandalaColoring: React.FC = () => {
             key={c}
             onClick={() => setSelectedPalette(c)}
             style={{ backgroundColor: c }}
-            className={`w-8 h-8 rounded-full shadow-md border-2 transition-transform ${
-              selectedPalette === c ? 'border-slate-900 scale-125' : 'border-white'
+            className={`w-9 h-9 rounded-full shadow-md border-2 transition-transform cursor-pointer ${
+              selectedPalette === c ? 'border-[#0B1F2A] dark:border-white scale-125' : 'border-white/80'
             }`}
           />
         ))}
       </div>
 
       {/* Interactive SVG Mandala */}
-      <div className="w-64 h-64 mx-auto">
-        <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-lg">
-          <circle cx="100" cy="100" r="95" fill={colors['bg'] || '#ffffff'} stroke="#cbd5e1" strokeWidth="2" onClick={() => handlePetalClick('bg')} className="cursor-pointer" />
+      <div className="w-64 h-64 sm:w-72 sm:h-72 mx-auto">
+        <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-xl">
+          <circle cx="100" cy="100" r="95" fill={colors['bg'] || '#ffffff'} stroke="#3FCDA8" strokeWidth="2" onClick={() => handlePetalClick('bg')} className="cursor-pointer" />
           
           {/* 8 Outer Petals */}
           {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, idx) => (
@@ -64,7 +64,7 @@ export const MandalaColoring: React.FC = () => {
               <path
                 d="M100 20 C120 50 120 80 100 100 C80 80 80 50 100 20 Z"
                 fill={colors[`outer_${idx}`] || '#f8fafc'}
-                stroke="#64748b"
+                stroke="#0B1F2A"
                 strokeWidth="1.5"
                 onClick={() => handlePetalClick(`outer_${idx}`)}
                 className="cursor-pointer hover:opacity-80 transition-opacity"
@@ -72,7 +72,7 @@ export const MandalaColoring: React.FC = () => {
               <path
                 d="M100 40 C110 60 110 80 100 95 C90 80 90 60 100 40 Z"
                 fill={colors[`inner_${idx}`] || '#f1f5f9'}
-                stroke="#64748b"
+                stroke="#0B1F2A"
                 strokeWidth="1"
                 onClick={() => handlePetalClick(`inner_${idx}`)}
                 className="cursor-pointer hover:opacity-80 transition-opacity"
@@ -86,7 +86,7 @@ export const MandalaColoring: React.FC = () => {
             cy="100"
             r="20"
             fill={colors['center'] || '#fef08a'}
-            stroke="#64748b"
+            stroke="#0B1F2A"
             strokeWidth="2"
             onClick={() => handlePetalClick('center')}
             className="cursor-pointer hover:opacity-80"
@@ -96,3 +96,4 @@ export const MandalaColoring: React.FC = () => {
     </div>
   );
 };
+

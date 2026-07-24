@@ -1,1 +1,128 @@
 @import "tailwindcss";
+
+@theme {
+  --color-navy-base: #0B1F2A;
+  --color-navy-dark: #081620;
+  --color-navy-card: #0F2836;
+  --color-navy-card-hover: #143345;
+  --color-navy-border: rgba(63, 205, 168, 0.2);
+  --color-aurora-teal: #3FCDA8;
+  --color-aurora-glow: rgba(63, 205, 168, 0.12);
+  --color-soft-cream: #F7F3E9;
+  --color-warm-gold: #F2A65A;
+  --color-muted-violet: #8B85C4;
+
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  /* Light mode (default) */
+  body {
+    background-color: #F7F3E9;
+    background-image: radial-gradient(circle at 50% 20%, rgba(63, 205, 168, 0.18) 0%, rgba(247, 243, 233, 0) 65%),
+                      radial-gradient(circle at 80% 70%, rgba(242, 166, 90, 0.12) 0%, rgba(247, 243, 233, 0) 50%);
+    background-attachment: fixed;
+    color: #1C2D37;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
+    color: #0B1F2A;
+  }
+
+  /* Dark mode */
+  html.dark body {
+    background-color: #0B1F2A;
+    background-image: radial-gradient(circle at 50% 20%, rgba(63, 205, 168, 0.12) 0%, rgba(11, 31, 42, 0) 65%),
+                      radial-gradient(circle at 80% 70%, rgba(139, 133, 196, 0.08) 0%, rgba(8, 22, 32, 0) 50%);
+    background-attachment: fixed;
+    color: rgba(247, 243, 233, 0.85);
+  }
+
+  html.dark h1,
+  html.dark h2,
+  html.dark h3,
+  html.dark h4,
+  html.dark .font-serif {
+    color: #F7F3E9;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0EAD9;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #081620;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(63, 205, 168, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(63, 205, 168, 0.8);
+}
+
+/* Glowing Radial Background Utility */
+.aurora-glow-bg {
+  background-image: radial-gradient(circle at center, rgba(63, 205, 168, 0.14) 0%, transparent 70%);
+}
+
+.aurora-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(63, 205, 168, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(11, 31, 42, 0.08), 0 0 20px 0 rgba(63, 205, 168, 0.05);
+}
+
+html.dark .aurora-card {
+  background-color: #0F2836;
+  border: 1px solid rgba(63, 205, 168, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(8, 22, 32, 0.8), 0 0 20px 0 rgba(63, 205, 168, 0.05);
+}
+
+.aurora-card:hover {
+  border-color: rgba(63, 205, 168, 0.5);
+  box-shadow: 0 15px 35px -10px rgba(11, 31, 42, 0.12), 0 0 25px 0 rgba(63, 205, 168, 0.12);
+}
+
+/* Breathing Rings Animation */
+@keyframes breathingPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.75;
+  }
+}
+
+.animate-breathing-ring-1 {
+  animation: breathingPulse 8s ease-in-out infinite;
+}
+
+.animate-breathing-ring-2 {
+  animation: breathingPulse 8s ease-in-out infinite 2s;
+}
+
+.animate-breathing-ring-3 {
+  animation: breathingPulse 8s ease-in-out infinite 4s;
+}

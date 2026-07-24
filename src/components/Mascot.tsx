@@ -19,30 +19,30 @@ export const Mascot: React.FC = () => {
       
       {/* Speech Bubble Tip Box */}
       {isOpen && (
-        <div className="bg-white dark:bg-[#34121d] p-4 rounded-3xl shadow-2xl border-2 border-orange-300 dark:border-rose-800 max-w-xs space-y-3 animate-bounce-short relative text-stone-800 dark:text-rose-100">
+        <div className="bg-white dark:bg-[#0F2836] p-4 rounded-3xl shadow-2xl border-2 border-[#3FCDA8]/40 max-w-xs space-y-3 relative text-[#0B1F2A] dark:text-[#F7F3E9] transition-colors">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-2.5 right-2.5 p-1 rounded-full text-stone-400 hover:text-stone-600 dark:hover:text-rose-200"
+            className="absolute top-2.5 right-2.5 p-1 rounded-full text-[#1C2D37]/50 dark:text-[#F7F3E9]/50 hover:text-[#0B1F2A] dark:hover:text-[#F7F3E9]"
             title="Minimize"
           >
             <X className="w-3.5 h-3.5" />
           </button>
 
-          <div className="flex items-center gap-1.5 text-xs font-bold text-orange-600 dark:text-rose-300">
-            <Sparkles className="w-4 h-4 text-orange-500" />
-            <span>Peace Buddy says:</span>
+          <div className="flex items-center gap-1.5 text-xs font-bold text-[#169375] dark:text-[#3FCDA8]">
+            <Sparkles className="w-4 h-4 text-[#F2A65A]" />
+            <span>Peace Buddy says: 🕊️</span>
           </div>
 
-          <p className="text-xs font-medium leading-relaxed italic">
+          <p className="text-xs font-medium leading-relaxed italic text-[#1C2D37] dark:text-[#F7F3E9]/90">
             &ldquo;{currentTip}&rdquo;
           </p>
 
           <button
             onClick={handleNextTip}
-            className="w-full py-1.5 rounded-xl bg-orange-100 dark:bg-rose-950 text-orange-900 dark:text-rose-200 font-bold text-[11px] hover:bg-orange-200 dark:hover:bg-rose-900 transition-colors flex items-center justify-center gap-1"
+            className="w-full py-1.5 rounded-xl bg-[#F7F3E9] dark:bg-[#0B1F2A] text-[#0B1F2A] dark:text-[#F7F3E9] border border-[#3FCDA8]/30 font-bold text-[11px] hover:bg-[#EAE4D3] dark:hover:bg-[#143345] transition-colors flex items-center justify-center gap-1"
           >
-            <span>Next Tip</span>
-            <ChevronRight className="w-3.5 h-3.5" />
+            <span>Next Tip ✨</span>
+            <ChevronRight className="w-3.5 h-3.5 text-[#169375] dark:text-[#3FCDA8]" />
           </button>
         </div>
       )}
@@ -50,11 +50,11 @@ export const Mascot: React.FC = () => {
       {/* Mascot Avatar Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 rounded-full bg-gradient-to-tr from-orange-400 via-rose-400 to-amber-400 shadow-2xl border-4 border-white dark:border-[#34121d] flex items-center justify-center text-white transform hover:scale-110 active:scale-95 transition-transform group"
+        className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#3FCDA8] via-[#8B85C4] to-[#F2A65A] shadow-2xl border-4 border-white dark:border-[#0B1F2A] flex items-center justify-center text-white transform hover:scale-110 active:scale-95 transition-transform group"
         title="Peace Buddy Tips"
       >
         <Heart className="w-7 h-7 fill-white/90 group-hover:rotate-12 transition-transform" />
-        <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-orange-500 border-2 border-white animate-ping" />
+        <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#F2A65A] border-2 border-white animate-ping" />
       </button>
 
     </div>

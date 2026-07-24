@@ -3,18 +3,18 @@ import { Wind, Sparkles } from 'lucide-react';
 import { audioSynth } from '../../utils/audioSynth';
 
 export const BreathingBubble: React.FC = () => {
-  const [size, setSize] = useState(100);
+  const [size, setSize] = useState(110);
   const [phase, setPhase] = useState<'Inhale' | 'Exhale'>('Inhale');
 
   useEffect(() => {
     const interval = setInterval(() => {
       setPhase((prev) => {
         if (prev === 'Inhale') {
-          setSize(180);
+          setSize(190);
           audioSynth.playBubblePop();
           return 'Exhale';
         } else {
-          setSize(100);
+          setSize(110);
           return 'Inhale';
         }
       });
@@ -23,24 +23,25 @@ export const BreathingBubble: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-orange-100/80 via-rose-100/60 to-amber-100/80 dark:from-[#34121d] dark:via-[#2b0c16] dark:to-[#220a12] p-8 rounded-3xl border border-orange-200 dark:border-rose-900/60 shadow-xl space-y-6 text-center">
+    <div className="bg-gradient-to-br from-[#F7F3E9] via-white to-[#F0EAD9] dark:from-[#0B1F2A] dark:via-[#0A1B25] dark:to-[#081620] p-6 sm:p-8 rounded-3xl border border-[#3FCDA8]/30 shadow-xl space-y-6 text-center text-[#0B1F2A] dark:text-[#F7F3E9] transition-colors">
       <div>
-        <h3 className="text-xl font-bold font-serif text-stone-900 dark:text-rose-100">
-          Breathing Bubble Rhythm
+        <h3 className="text-xl sm:text-2xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
+          Breathing Bubble Rhythm 🌬️
         </h3>
-        <p className="text-xs text-stone-600 dark:text-rose-200/80">
-          Sync your breath naturally with the expanding and shrinking bubble.
+        <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
+          Sync your breath naturally with the expanding and shrinking lotus bubble.
         </p>
       </div>
 
       <div className="flex items-center justify-center h-52">
         <div
           style={{ width: `${size}px`, height: `${size}px` }}
-          className="rounded-full bg-gradient-to-tr from-orange-400 via-rose-400 to-amber-400 shadow-2xl border-4 border-white/80 flex items-center justify-center text-white font-bold transition-all duration-4000 ease-in-out"
+          className="rounded-full bg-gradient-to-tr from-[#3FCDA8] via-[#8B85C4] to-[#F2A65A] shadow-2xl border-4 border-white dark:border-[#0B1F2A] flex items-center justify-center text-white font-bold text-sm sm:text-base transition-all duration-4000 ease-in-out uppercase tracking-wider"
         >
-          {phase === 'Inhale' ? 'Breathe In...' : 'Breathe Out...'}
+          {phase === 'Inhale' ? 'Breathe In... 🍃' : 'Breathe Out... 🕊️'}
         </div>
       </div>
     </div>
   );
 };
+

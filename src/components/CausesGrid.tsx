@@ -16,21 +16,21 @@ export const CausesGrid: React.FC = () => {
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'GraduationCap': return <GraduationCap className="w-6 h-6 text-orange-500" />;
-      case 'Coins': return <Coins className="w-6 h-6 text-amber-500" />;
-      case 'HeartBreak': return <Heart className="w-6 h-6 text-rose-500" />;
-      case 'UserX': return <UserX className="w-6 h-6 text-amber-600" />;
-      case 'ShieldAlert': return <ShieldAlert className="w-6 h-6 text-rose-600" />;
-      case 'Briefcase': return <Briefcase className="w-6 h-6 text-orange-600" />;
-      case 'Home': return <Home className="w-6 h-6 text-amber-500" />;
-      case 'Activity': return <Activity className="w-6 h-6 text-rose-500" />;
-      case 'Stethoscope': return <Stethoscope className="w-6 h-6 text-orange-500" />;
-      case 'Smartphone': return <Smartphone className="w-6 h-6 text-rose-400" />;
-      case 'Moon': return <Moon className="w-6 h-6 text-amber-600" />;
-      case 'ZapOff': return <ZapOff className="w-6 h-6 text-orange-500" />;
-      case 'Flower2': return <Flower2 className="w-6 h-6 text-rose-400" />;
-      case 'Sparkles': return <Sparkles className="w-6 h-6 text-amber-500" />;
-      default: return <Sparkles className="w-6 h-6 text-orange-500" />;
+      case 'GraduationCap': return <GraduationCap className="w-6 h-6 text-[#3FCDA8]" />;
+      case 'Coins': return <Coins className="w-6 h-6 text-[#F2A65A]" />;
+      case 'HeartBreak': return <Heart className="w-6 h-6 text-rose-400" />;
+      case 'UserX': return <UserX className="w-6 h-6 text-[#8B85C4]" />;
+      case 'ShieldAlert': return <ShieldAlert className="w-6 h-6 text-rose-400" />;
+      case 'Briefcase': return <Briefcase className="w-6 h-6 text-[#3FCDA8]" />;
+      case 'Home': return <Home className="w-6 h-6 text-[#F2A65A]" />;
+      case 'Activity': return <Activity className="w-6 h-6 text-[#3FCDA8]" />;
+      case 'Stethoscope': return <Stethoscope className="w-6 h-6 text-[#3FCDA8]" />;
+      case 'Smartphone': return <Smartphone className="w-6 h-6 text-[#8B85C4]" />;
+      case 'Moon': return <Moon className="w-6 h-6 text-[#8B85C4]" />;
+      case 'ZapOff': return <ZapOff className="w-6 h-6 text-[#F2A65A]" />;
+      case 'Flower2': return <Flower2 className="w-6 h-6 text-[#3FCDA8]" />;
+      case 'Sparkles': return <Sparkles className="w-6 h-6 text-[#F2A65A]" />;
+      default: return <Sparkles className="w-6 h-6 text-[#3FCDA8]" />;
     }
   };
 
@@ -43,20 +43,24 @@ export const CausesGrid: React.FC = () => {
   });
 
   return (
-    <section id="causes" className="py-16 sm:py-24 bg-gradient-to-b from-orange-50/60 via-rose-50/50 to-amber-50/60 dark:from-[#2a0e17] dark:via-[#220a12] dark:to-[#1f070e] transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="causes" className="py-16 sm:py-24 bg-gradient-to-b from-[#F7F3E9] via-white to-[#F0EAD9] dark:from-[#0B1F2A] dark:via-[#0A1B25] dark:to-[#081620] transition-colors relative overflow-hidden">
+      
+      {/* Background radial glow */}
+      <div className="absolute top-1/3 right-10 w-96 h-96 bg-[#3FCDA8]/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 dark:bg-rose-950 text-orange-950 dark:text-rose-200 text-xs font-bold uppercase tracking-wider">
-            <Lightbulb className="w-4 h-4 text-orange-500" />
-            <span>Understanding Triggers & Roots</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-[#0F2836] text-[#169375] dark:text-[#3FCDA8] border border-[#3FCDA8]/30 text-xs font-bold uppercase tracking-wider">
+            <Lightbulb className="w-4 h-4 text-[#F2A65A]" />
+            <span>Understanding Triggers & Roots 🔍🌱</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-serif text-stone-900 dark:text-rose-100">
-            Reasons Behind Depression
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
+            Reasons Behind Emotional Strain 💡
           </h2>
-          <p className="text-base sm:text-lg text-stone-600 dark:text-rose-200/80">
-            Depression can stem from complex personal, environmental, or physiological pressures. Recognizing what you are facing empowers you to heal.
+          <p className="text-base sm:text-lg text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
+            Depression can stem from complex personal, environmental, or physiological pressures. Recognizing what you face empowers you to gently heal 🌿🕊️.
           </p>
         </div>
 
@@ -65,18 +69,18 @@ export const CausesGrid: React.FC = () => {
           
           {/* Search Box */}
           <div className="relative w-full md:w-80">
-            <Search className="w-4 h-4 absolute left-3.5 top-3.5 text-stone-400" />
+            <Search className="w-4 h-4 absolute left-3.5 top-3.5 text-[#169375] dark:text-[#3FCDA8]/60" />
             <input
               type="text"
-              placeholder="Search triggers (e.g. sleep, work)..."
+              placeholder="Search triggers (e.g. sleep, work)... 🔍"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-white dark:bg-[#351320] border border-orange-200 dark:border-rose-900/60 text-xs sm:text-sm text-stone-800 dark:text-rose-100 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-white dark:bg-[#0F2836] border border-[#3FCDA8]/30 text-xs sm:text-sm text-[#0B1F2A] dark:text-[#F7F3E9] placeholder-[#1C2D37]/40 dark:placeholder-[#F7F3E9]/40 focus:outline-none focus:ring-2 focus:ring-[#3FCDA8]"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-3 text-stone-400 hover:text-stone-600"
+                className="absolute right-3 top-3 text-[#1C2D37]/50 dark:text-[#F7F3E9]/50 hover:text-[#0B1F2A] dark:hover:text-[#F7F3E9]"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -89,10 +93,10 @@ export const CausesGrid: React.FC = () => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${
                   selectedCategory === cat
-                    ? 'bg-orange-600 text-white shadow-sm'
-                    : 'bg-white dark:bg-[#351320] text-stone-600 dark:text-rose-200 border border-orange-200 dark:border-rose-900/60 hover:bg-orange-50 dark:hover:bg-[#431826]'
+                    ? 'bg-[#3FCDA8] text-[#081620] font-bold shadow-md'
+                    : 'bg-white dark:bg-[#0F2836] text-[#0B1F2A] dark:text-[#F7F3E9] border border-[#3FCDA8]/30 hover:bg-[#EAE4D3] dark:hover:bg-[#143345]'
                 }`}
               >
                 {cat}
@@ -108,30 +112,30 @@ export const CausesGrid: React.FC = () => {
             <div
               key={cause.id}
               onClick={() => setActiveModalCause(cause)}
-              className="group cursor-pointer bg-white/90 dark:bg-[#2d101a]/90 rounded-3xl p-6 border border-orange-200/80 dark:border-rose-900/60 shadow-sm hover:shadow-xl hover:border-orange-400 dark:hover:border-rose-500 transition-all duration-300 flex flex-col justify-between"
+              className="group cursor-pointer bg-white dark:bg-[#0F2836] hover:bg-[#F7F3E9] dark:hover:bg-[#143345] rounded-3xl p-6 border border-[#3FCDA8]/30 shadow-lg transition-all duration-300 flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="p-3 rounded-2xl bg-orange-50 dark:bg-[#3d1624] group-hover:scale-110 transition-transform">
+                  <div className="p-3 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 group-hover:scale-110 transition-transform">
                     {getIcon(cause.iconName)}
                   </div>
-                  <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-orange-100 dark:bg-rose-950 text-orange-900 dark:text-rose-200 uppercase tracking-wider">
+                  <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#3FCDA8]/20 text-[#169375] dark:text-[#3FCDA8] border border-[#3FCDA8]/30 uppercase tracking-wider">
                     {cause.category}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold font-serif text-stone-900 dark:text-rose-100 group-hover:text-orange-600 dark:group-hover:text-rose-300 transition-colors">
+                <h3 className="text-lg font-serif font-bold text-[#0B1F2A] dark:text-[#F7F3E9] group-hover:text-[#169375] dark:group-hover:text-[#3FCDA8] transition-colors">
                   {cause.title}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-stone-600 dark:text-rose-200/80 line-clamp-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 line-clamp-2 leading-relaxed">
                   {cause.shortDescription}
                 </p>
               </div>
 
               {/* Positive Advice Snapshot */}
-              <div className="mt-6 pt-4 border-t border-orange-100 dark:border-rose-900/40 flex items-center justify-between text-xs font-extrabold text-orange-600 dark:text-orange-400">
-                <span>View Positive Advice</span>
+              <div className="mt-6 pt-4 border-t border-[#3FCDA8]/20 flex items-center justify-between text-xs font-bold text-[#169375] dark:text-[#3FCDA8]">
+                <span>View Gentle Insight 🌿</span>
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
@@ -139,16 +143,16 @@ export const CausesGrid: React.FC = () => {
         </div>
 
         {filteredCauses.length === 0 && (
-          <div className="text-center py-12 bg-white dark:bg-stone-800 rounded-3xl p-8 max-w-md mx-auto border border-orange-200 dark:border-stone-700">
-            <Search className="w-10 h-10 text-stone-400 mx-auto mb-3" />
-            <p className="text-stone-600 dark:text-stone-300 font-medium">
+          <div className="text-center py-12 bg-white dark:bg-[#0F2836] rounded-3xl p-8 max-w-md mx-auto border border-[#3FCDA8]/30">
+            <Search className="w-10 h-10 text-[#3FCDA8]/60 mx-auto mb-3" />
+            <p className="text-[#0B1F2A] dark:text-[#F7F3E9]/80 font-medium">
               No matching triggers found for &ldquo;{searchQuery}&rdquo;.
             </p>
             <button
               onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
-              className="mt-4 px-4 py-2 rounded-xl bg-orange-100 dark:bg-orange-950 text-orange-900 dark:text-orange-200 text-xs font-bold"
+              className="mt-4 px-4 py-2 rounded-xl bg-[#3FCDA8] text-[#081620] text-xs font-bold"
             >
-              Reset Filters
+              Reset Filters 🔄
             </button>
           </div>
         )}
@@ -157,59 +161,59 @@ export const CausesGrid: React.FC = () => {
 
       {/* Cause Detail Modal */}
       {activeModalCause && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1f070e]/80 backdrop-blur-sm animate-fadeIn">
-          <div className="bg-white dark:bg-[#2d101a] rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-orange-200 dark:border-rose-900/80 relative space-y-6 max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#081620]/80 backdrop-blur-md animate-fadeIn">
+          <div className="bg-white dark:bg-[#0F2836] text-[#0B1F2A] dark:text-[#F7F3E9] rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-[#3FCDA8]/40 relative space-y-6 max-h-[90vh] overflow-y-auto">
             
             <button
               onClick={() => setActiveModalCause(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-stone-100 dark:bg-[#3d1624] text-stone-500 hover:text-stone-800 dark:hover:text-rose-200"
+              className="absolute top-5 right-5 p-2 rounded-full bg-[#F7F3E9] dark:bg-[#0B1F2A] text-[#0B1F2A] dark:text-[#F7F3E9]/70 hover:opacity-80 border border-[#3FCDA8]/20"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div className="flex items-center gap-3">
-              <div className="p-3.5 rounded-2xl bg-orange-100 dark:bg-rose-950/80 border border-orange-200 dark:border-rose-800">
+              <div className="p-3.5 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30">
                 {getIcon(activeModalCause.iconName)}
               </div>
               <div>
-                <span className="text-xs font-bold text-orange-600 dark:text-rose-300 uppercase tracking-wider">
-                  {activeModalCause.category} Trigger
+                <span className="text-xs font-bold text-[#F2A65A] uppercase tracking-wider">
+                  {activeModalCause.category} Trigger 🏷️
                 </span>
-                <h3 className="text-2xl font-bold font-serif text-stone-900 dark:text-rose-100">
+                <h3 className="text-2xl font-serif font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
                   {activeModalCause.title}
                 </h3>
               </div>
             </div>
 
             <div className="space-y-4">
-              <div className="p-4 rounded-2xl bg-stone-50 dark:bg-[#381422] text-stone-700 dark:text-rose-100 text-sm leading-relaxed">
-                <span className="font-semibold block mb-1 text-stone-900 dark:text-rose-100">
-                  Why It Affects Mood:
+              <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] text-[#1C2D37] dark:text-[#F7F3E9]/90 text-sm leading-relaxed border border-[#3FCDA8]/20">
+                <span className="font-semibold block mb-1 text-[#0B1F2A] dark:text-[#F7F3E9]">
+                  Why It Affects Mood 🧠:
                 </span>
                 {activeModalCause.detailedExplanation}
               </div>
 
-              <div className="p-4 rounded-2xl bg-amber-50 dark:bg-rose-950/70 border border-amber-200 dark:border-rose-800/80 text-amber-950 dark:text-rose-100 text-sm leading-relaxed space-y-2">
-                <div className="flex items-center gap-2 font-bold text-amber-900 dark:text-rose-200">
-                  <Lightbulb className="w-4 h-4 text-amber-500" />
-                  <span>Positive Compassionate Advice:</span>
+              <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#F2A65A]/40 text-[#1C2D37] dark:text-[#F7F3E9] text-sm leading-relaxed space-y-2">
+                <div className="flex items-center gap-2 font-bold text-[#F2A65A]">
+                  <Lightbulb className="w-4 h-4 text-[#F2A65A]" />
+                  <span>Compassionate Guidance 🕊️:</span>
                 </div>
-                <p>{activeModalCause.positiveAdvice}</p>
+                <p className="text-[#1C2D37]/90 dark:text-[#F7F3E9]/80">{activeModalCause.positiveAdvice}</p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-orange-50 dark:bg-rose-900/50 border border-orange-200 dark:border-rose-800/80 text-orange-950 dark:text-rose-100 text-sm leading-relaxed space-y-1">
-                <span className="font-bold block text-orange-900 dark:text-rose-200">
+              <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/40 text-[#1C2D37] dark:text-[#F7F3E9] text-sm leading-relaxed space-y-1">
+                <span className="font-bold block text-[#169375] dark:text-[#3FCDA8]">
                   🌱 Gentle Action Step:
                 </span>
-                <p>{activeModalCause.copingTip}</p>
+                <p className="text-[#1C2D37]/90 dark:text-[#F7F3E9]/80">{activeModalCause.copingTip}</p>
               </div>
             </div>
 
             <button
               onClick={() => setActiveModalCause(null)}
-              className="w-full py-3 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm shadow-md transition-colors"
+              className="w-full py-3 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-sm shadow-md transition-colors"
             >
-              I Understand & Keep Going
+              I Understand & Keep Going 🌿
             </button>
 
           </div>

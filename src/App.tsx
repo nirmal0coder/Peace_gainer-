@@ -66,7 +66,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50/50 via-white to-rose-50/30 dark:from-[#2a0e17] dark:via-[#220a12] dark:to-[#1f070e] text-stone-800 dark:text-rose-100 font-sans transition-colors duration-300 relative selection:bg-rose-200 selection:text-rose-900">
+    <div className="min-h-screen bg-[#F7F3E9] dark:bg-[#0B1F2A] text-[#1C2D37] dark:text-[#F7F3E9]/85 font-sans transition-colors duration-300 relative selection:bg-[#3FCDA8]/30 selection:text-[#0B1F2A]">
       
       {/* Floating Canvas Animated Background */}
       <AnimatedBackground type={particleType} theme={theme} />
@@ -162,7 +162,7 @@ export default function App() {
           <div className="pb-16 animate-fadeIn">
             <PageHeader
               title="Solutions & Recovery Pathway"
-              subtitle="Evidence-based coping practices, CBT strategies, lifestyle shifts, and goal setter for personal progress."
+              subtitle="Evidence-based coping practices, positive mindset strategies, lifestyle shifts, and goal setter for personal progress."
               category="Recovery Plans"
               icon={<Compass className="w-6 h-6 text-teal-500" />}
               onGoHome={() => navigateToPage('home')}

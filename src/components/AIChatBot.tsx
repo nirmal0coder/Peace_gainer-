@@ -13,7 +13,7 @@ export const AIChatBot: React.FC = () => {
     {
       id: 'welcome-1',
       role: 'assistant',
-      text: "Hello, my dear friend. I'm Peace Buddy, your personal AI stress-relief companion. I'm here to listen without any judgment and help you find calm. How are you feeling right now?",
+      text: "Hello, my dear friend. I'm Peace Buddy, your personal AI stress-relief companion 🕊️. I'm here to listen without judgment and help you find deep emotional calm. How is your spirit feeling right now?",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     }
   ]);
@@ -72,7 +72,7 @@ export const AIChatBot: React.FC = () => {
       });
 
       const data = await res.json();
-      const aiReplyText = data.text || "Take a deep breath in... and let it out softly. I'm here right beside you. Tell me what's on your mind.";
+      const aiReplyText = data.text || "Take a deep, gentle breath in... and let it out softly 🌬️. I am right beside you. Share whatever is resting on your heart.";
 
       const aiMsg: ChatMessage = {
         id: (Date.now() + 1).toString(),
@@ -85,7 +85,7 @@ export const AIChatBot: React.FC = () => {
       setMessages((prev) => [...prev, aiMsg]);
       setIsLoading(false);
 
-      // Optionally generate & fetch lovely voice note audio
+      // Optionally generate & fetch voice note audio
       if (autoPlayVoice) {
         handlePlayVoiceNote(aiMsg.id, aiReplyText);
       }
@@ -94,7 +94,7 @@ export const AIChatBot: React.FC = () => {
       const fallbackMsg: ChatMessage = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        text: "I am right here with you. Take a slow, comforting breath. Remember that you are safe and supported.",
+        text: "I am right here with you 🌿. Take a slow, comforting breath. Remember that you are safe, valued, and supported.",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         voiceName: preferredVoice,
       };
@@ -200,49 +200,53 @@ export const AIChatBot: React.FC = () => {
   ];
 
   return (
-    <section id="aichat" className="py-16 sm:py-24 bg-gradient-to-b from-orange-50/60 via-amber-50/50 to-rose-50/60 dark:from-[#2a0e17] dark:via-[#220a12] dark:to-[#1f070e] transition-colors">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="aichat" className="py-16 sm:py-24 bg-gradient-to-b from-[#0B1F2A] via-[#0A1B25] to-[#081620] transition-colors relative overflow-hidden">
+      
+      {/* Background radial glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#3FCDA8]/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 dark:bg-rose-950 text-orange-900 dark:text-rose-200 text-xs font-bold uppercase tracking-wider">
-            <Bot className="w-4 h-4 text-orange-500 animate-pulse" />
-            <span>AI Mental Wellness Companion</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F2836] text-[#3FCDA8] border border-[#3FCDA8]/30 text-xs font-bold uppercase tracking-wider">
+            <Bot className="w-4 h-4 text-[#3FCDA8] animate-pulse" />
+            <span>AI Mental Wellness Companion 🕊️</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-serif text-stone-900 dark:text-rose-100">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#F7F3E9]">
             Talk to Peace AI Companion
           </h2>
 
-          <p className="text-base sm:text-lg text-stone-600 dark:text-rose-200/80">
+          <p className="text-base sm:text-lg text-[#F7F3E9]/70">
             Share what&apos;s stressing you in a safe, confidential space. Experience soothing AI voice notes voiced in lovely tones.
           </p>
         </div>
 
         {/* Gender & Voice Personalization Bar */}
-        <div className="bg-white dark:bg-[#34121d] rounded-3xl p-5 sm:p-6 border border-orange-200 dark:border-rose-900/60 shadow-xl mb-8 space-y-4">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-orange-100 dark:border-rose-900/40">
+        <div className="bg-[#0F2836] rounded-3xl p-5 sm:p-6 border border-[#3FCDA8]/30 shadow-2xl mb-8 space-y-4">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-[#3FCDA8]/20">
             
             {/* User Gender Selection */}
             <div className="space-y-1.5">
-              <label className="text-xs font-bold text-stone-700 dark:text-rose-200 flex items-center gap-1.5 uppercase tracking-wider">
-                <UserCheck className="w-4 h-4 text-orange-500" />
-                <span>Your Gender (Sets Opposite AI Voice Note):</span>
+              <label className="text-xs font-bold text-[#F7F3E9] flex items-center gap-1.5 uppercase tracking-wider">
+                <UserCheck className="w-4 h-4 text-[#3FCDA8]" />
+                <span>Your Preference (Sets AI Voice Note):</span>
               </label>
 
               <div className="flex flex-wrap gap-2">
                 {[
-                  { id: 'male', label: '👨 Male (Opposite Voice: Lovely Female)', voice: 'Kore (Female)' },
-                  { id: 'female', label: '👩 Female (Opposite Voice: Lovely Male)', voice: 'Puck (Male)' },
-                  { id: 'non-binary', label: '🌈 Non-Binary / Custom Voice', voice: 'Zephyr (Soothing)' }
+                  { id: 'male', label: '👨 Male User (Voice: Lovely Female)', voice: 'Kore (Female)' },
+                  { id: 'female', label: '👩 Female User (Voice: Lovely Male)', voice: 'Puck (Male)' },
+                  { id: 'non-binary', label: '🌈 Custom Voice', voice: 'Zephyr (Soothing)' }
                 ].map((g) => (
                   <button
                     key={g.id}
                     onClick={() => setUserGender(g.id as UserGender)}
-                    className={`px-3.5 py-2 rounded-2xl text-xs font-bold transition-all ${
+                    className={`px-3.5 py-2 rounded-2xl text-xs font-medium transition-all ${
                       userGender === g.id
-                        ? 'bg-orange-600 text-white shadow-md'
-                        : 'bg-stone-100 dark:bg-[#401726] text-stone-700 dark:text-rose-200 hover:bg-orange-100 dark:hover:bg-[#4d1c2e]'
+                        ? 'bg-[#3FCDA8] text-[#081620] font-bold shadow-md'
+                        : 'bg-[#0B1F2A] text-[#F7F3E9]/80 border border-[#3FCDA8]/20 hover:border-[#3FCDA8]/50'
                     }`}
                   >
                     {g.label}
@@ -253,15 +257,15 @@ export const AIChatBot: React.FC = () => {
 
             {/* Manual Voice Selection Override */}
             <div className="space-y-1.5 self-stretch md:self-auto">
-              <label className="text-xs font-bold text-stone-700 dark:text-rose-200 flex items-center gap-1.5 uppercase tracking-wider">
-                <Settings2 className="w-4 h-4 text-amber-500" />
-                <span>AI Voice Note Voice:</span>
+              <label className="text-xs font-bold text-[#F7F3E9] flex items-center gap-1.5 uppercase tracking-wider">
+                <Settings2 className="w-4 h-4 text-[#F2A65A]" />
+                <span>AI Voice Note Tone:</span>
               </label>
 
               <select
                 value={preferredVoice}
                 onChange={(e) => setPreferredVoice(e.target.value as VoiceOption)}
-                className="w-full md:w-auto px-3.5 py-2 rounded-2xl bg-orange-50 dark:bg-[#401726] text-stone-800 dark:text-rose-100 text-xs font-bold border border-orange-200 dark:border-rose-800 focus:outline-none"
+                className="w-full md:w-auto px-3.5 py-2 rounded-2xl bg-[#0B1F2A] text-[#F7F3E9] text-xs font-bold border border-[#3FCDA8]/30 focus:outline-none"
               >
                 <option value="Kore">🌸 Kore (Soothing Female)</option>
                 <option value="Zephyr">✨ Zephyr (Warm Female)</option>
@@ -275,19 +279,19 @@ export const AIChatBot: React.FC = () => {
 
           {/* Active Voice Badge & Auto-Play Toggle */}
           <div className="flex flex-wrap items-center justify-between gap-3 text-xs">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-2xl bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-200 font-bold">
-              <Volume2 className="w-4 h-4 text-rose-500 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-2xl bg-[#0B1F2A] border border-[#3FCDA8]/30 text-[#3FCDA8] font-semibold">
+              <Volume2 className="w-4 h-4 text-[#3FCDA8] animate-pulse" />
               <span>
                 Active Voice Note: {preferredVoice} ({preferredVoice === 'Kore' || preferredVoice === 'Zephyr' ? 'Female' : 'Male'} Voice)
               </span>
             </div>
 
-            <label className="flex items-center gap-2 font-semibold text-stone-600 dark:text-rose-200/90 cursor-pointer">
+            <label className="flex items-center gap-2 font-semibold text-[#F7F3E9]/80 cursor-pointer">
               <input
                 type="checkbox"
                 checked={autoPlayVoice}
                 onChange={(e) => setAutoPlayVoice(e.target.checked)}
-                className="w-4 h-4 text-orange-600 rounded focus:ring-orange-400"
+                className="w-4 h-4 text-[#3FCDA8] rounded focus:ring-[#3FCDA8]"
               />
               <span>Auto-play voice note on reply</span>
             </label>
@@ -296,7 +300,7 @@ export const AIChatBot: React.FC = () => {
 
         {/* Quick Stress Prompt Chips */}
         <div className="mb-6 space-y-2">
-          <span className="text-xs font-bold text-stone-500 dark:text-rose-200/70 uppercase tracking-wider block">
+          <span className="text-xs font-bold text-[#F2A65A] uppercase tracking-wider block">
             Tap to ask Peace AI immediately:
           </span>
           <div className="flex flex-wrap gap-2">
@@ -304,7 +308,7 @@ export const AIChatBot: React.FC = () => {
               <button
                 key={idx}
                 onClick={() => handleSendMessage(qp.text)}
-                className="px-3.5 py-2 rounded-2xl bg-white dark:bg-[#34121d] border border-orange-200/80 dark:border-rose-900/60 text-xs font-semibold text-stone-700 dark:text-rose-100 hover:bg-orange-50 dark:hover:bg-[#421827] hover:border-orange-300 transition-all shadow-sm"
+                className="px-3.5 py-2 rounded-2xl bg-[#0F2836] border border-[#3FCDA8]/20 text-xs font-medium text-[#F7F3E9]/80 hover:border-[#3FCDA8]/50 hover:text-[#F7F3E9] transition-all shadow-sm"
               >
                 {qp.text}
               </button>
@@ -313,7 +317,7 @@ export const AIChatBot: React.FC = () => {
         </div>
 
         {/* Chat Box Container */}
-        <div className="bg-white dark:bg-[#2b0c16] rounded-3xl border border-orange-200 dark:border-rose-900/60 shadow-2xl overflow-hidden flex flex-col h-[520px]">
+        <div className="bg-[#0F2836] rounded-3xl border border-[#3FCDA8]/30 shadow-2xl overflow-hidden flex flex-col h-[520px]">
           
           {/* Chat Messages List */}
           <div className="flex-1 p-4 sm:p-6 overflow-y-auto space-y-4">
@@ -326,13 +330,13 @@ export const AIChatBot: React.FC = () => {
               >
                 {/* Avatar */}
                 <div
-                  className={`w-9 h-9 rounded-2xl flex items-center justify-center flex-shrink-0 text-white shadow-md ${
+                  className={`w-9 h-9 rounded-2xl flex items-center justify-center flex-shrink-0 text-[#081620] shadow-md font-bold ${
                     m.role === 'user'
-                      ? 'bg-gradient-to-tr from-orange-500 via-rose-500 to-amber-500'
-                      : 'bg-gradient-to-tr from-rose-500 to-orange-500'
+                      ? 'bg-[#F2A65A]'
+                      : 'bg-[#3FCDA8]'
                   }`}
                 >
-                  {m.role === 'user' ? <User className="w-5 h-5" /> : <Bot className="w-5 h-5" />}
+                  {m.role === 'user' ? <User className="w-5 h-5 text-[#081620]" /> : <Bot className="w-5 h-5 text-[#081620]" />}
                 </div>
 
                 {/* Message Bubble */}
@@ -340,8 +344,8 @@ export const AIChatBot: React.FC = () => {
                   <div
                     className={`p-4 sm:p-5 rounded-3xl text-xs sm:text-sm leading-relaxed shadow-sm ${
                       m.role === 'user'
-                        ? 'bg-gradient-to-r from-orange-500 via-rose-500 to-amber-500 text-white rounded-tr-none'
-                        : 'bg-orange-50/80 dark:bg-[#381420] text-stone-800 dark:text-rose-100 rounded-tl-none border border-orange-200/60 dark:border-rose-900/60'
+                        ? 'bg-[#3FCDA8] text-[#081620] font-medium rounded-tr-none'
+                        : 'bg-[#0B1F2A] text-[#F7F3E9] rounded-tl-none border border-[#3FCDA8]/20'
                     }`}
                   >
                     <p className="whitespace-pre-wrap">{m.text}</p>
@@ -349,25 +353,25 @@ export const AIChatBot: React.FC = () => {
 
                   {/* Actions Bar for AI Messages */}
                   {m.role === 'assistant' && (
-                    <div className="flex items-center gap-3 text-[11px] font-semibold text-stone-500 dark:text-rose-200/80 pl-1">
+                    <div className="flex items-center gap-3 text-[11px] font-semibold text-[#F7F3E9]/70 pl-1">
                       
                       {/* Play Voice Note Button */}
                       <button
                         onClick={() => handlePlayVoiceNote(m.id, m.text)}
                         className={`px-3 py-1 rounded-xl flex items-center gap-1.5 transition-colors ${
                           currentlyPlayingId === m.id
-                            ? 'bg-orange-500 text-white animate-pulse'
-                            : 'bg-orange-100 dark:bg-rose-950 text-orange-800 dark:text-rose-200 hover:bg-orange-200'
+                            ? 'bg-[#3FCDA8] text-[#081620] font-bold animate-pulse'
+                            : 'bg-[#0B1F2A] text-[#3FCDA8] border border-[#3FCDA8]/30 hover:bg-[#143345]'
                         }`}
                       >
                         {currentlyPlayingId === m.id ? (
                           <>
-                            <Square className="w-3.5 h-3.5 fill-white" />
+                            <Square className="w-3.5 h-3.5 fill-[#081620]" />
                             <span>Stop Voice Note</span>
                           </>
                         ) : (
                           <>
-                            <Volume2 className="w-3.5 h-3.5 text-orange-600 dark:text-rose-300" />
+                            <Volume2 className="w-3.5 h-3.5 text-[#3FCDA8]" />
                             <span>Play Lovely Voice Note 🎧</span>
                           </>
                         )}
@@ -376,9 +380,9 @@ export const AIChatBot: React.FC = () => {
                       {/* Copy Text */}
                       <button
                         onClick={() => copyToClipboard(m.text, m.id)}
-                        className="hover:text-stone-800 dark:hover:text-rose-100 flex items-center gap-1"
+                        className="hover:text-[#F7F3E9] flex items-center gap-1"
                       >
-                        {copiedId === m.id ? <Check className="w-3.5 h-3.5 text-orange-500" /> : <Copy className="w-3.5 h-3.5" />}
+                        {copiedId === m.id ? <Check className="w-3.5 h-3.5 text-[#3FCDA8]" /> : <Copy className="w-3.5 h-3.5" />}
                         <span>{copiedId === m.id ? 'Copied' : 'Copy'}</span>
                       </button>
 
@@ -387,7 +391,7 @@ export const AIChatBot: React.FC = () => {
                   )}
 
                   {m.role === 'user' && (
-                    <span className="text-[10px] text-stone-400 dark:text-rose-300/60 block text-right pr-1">{m.timestamp}</span>
+                    <span className="text-[10px] text-[#F7F3E9]/50 block text-right pr-1">{m.timestamp}</span>
                   )}
                 </div>
               </div>
@@ -396,11 +400,11 @@ export const AIChatBot: React.FC = () => {
             {/* Loading Indicator */}
             {isLoading && (
               <div className="flex gap-3 mr-auto items-center">
-                <div className="w-9 h-9 rounded-2xl bg-orange-500 text-white flex items-center justify-center shadow-md">
+                <div className="w-9 h-9 rounded-2xl bg-[#3FCDA8] text-[#081620] flex items-center justify-center shadow-md">
                   <Bot className="w-5 h-5 animate-bounce" />
                 </div>
-                <div className="p-4 rounded-3xl bg-orange-50 dark:bg-[#381420] text-xs font-semibold text-stone-600 dark:text-rose-200 flex items-center gap-2">
-                  <RefreshCw className="w-4 h-4 animate-spin text-orange-500" />
+                <div className="p-4 rounded-3xl bg-[#0B1F2A] border border-[#3FCDA8]/30 text-xs font-semibold text-[#F7F3E9] flex items-center gap-2">
+                  <RefreshCw className="w-4 h-4 animate-spin text-[#3FCDA8]" />
                   <span>Peace Buddy is crafting a soothing response...</span>
                 </div>
               </div>
@@ -410,7 +414,7 @@ export const AIChatBot: React.FC = () => {
           </div>
 
           {/* Input Bar */}
-          <div className="p-3 sm:p-4 bg-orange-50/50 dark:bg-[#230912] border-t border-orange-200/60 dark:border-rose-900/60">
+          <div className="p-3 sm:p-4 bg-[#0B1F2A] border-t border-[#3FCDA8]/20">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -426,10 +430,10 @@ export const AIChatBot: React.FC = () => {
                 className={`p-3 rounded-2xl transition-colors ${
                   isListening
                     ? 'bg-rose-500 text-white animate-pulse'
-                    : 'bg-white dark:bg-[#381420] text-stone-600 dark:text-rose-200 hover:bg-orange-100'
+                    : 'bg-[#0F2836] text-[#3FCDA8] border border-[#3FCDA8]/30 hover:bg-[#143345]'
                 }`}
               >
-                {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5 text-orange-600" />}
+                {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5 text-[#3FCDA8]" />}
               </button>
 
               <input
@@ -437,20 +441,20 @@ export const AIChatBot: React.FC = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type how you are feeling, or ask for stress advice..."
-                className="flex-1 px-4 py-3.5 rounded-2xl bg-white dark:bg-[#34121d] border border-orange-200 dark:border-rose-900/60 text-xs sm:text-sm text-stone-800 dark:text-rose-100 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                className="flex-1 px-4 py-3.5 rounded-2xl bg-[#0F2836] border border-[#3FCDA8]/30 text-xs sm:text-sm text-[#F7F3E9] placeholder-[#F7F3E9]/40 focus:outline-none focus:ring-2 focus:ring-[#3FCDA8]"
               />
 
               <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
-                className="px-5 py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 disabled:opacity-50 text-white font-bold text-xs shadow-md flex items-center gap-2 transition-transform transform active:scale-95"
+                className="px-5 py-3.5 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] disabled:opacity-50 text-[#081620] font-bold text-xs shadow-md flex items-center gap-2 transition-transform transform active:scale-95"
               >
                 <span>Send</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
 
-            <div className="mt-2 text-center text-[10px] text-stone-400 dark:text-rose-300/60">
+            <div className="mt-2 text-center text-[10px] text-[#F7F3E9]/50">
               Peace AI is a supportive self-help tool. For medical emergency, call Tele-MANAS helpline at <strong>14416</strong>.
             </div>
           </div>

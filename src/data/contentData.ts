@@ -79,7 +79,7 @@ export const CAUSES_DATA: CauseItem[] = [
     shortDescription: 'Unprocessed painful events, accidents, loss, or abuse.',
     detailedExplanation: 'Unresolved trauma keeps the nervous system trapped in a state of alarm or emotional numbness.',
     positiveAdvice: 'Healing from trauma takes time, gentleness, and professional care. You were strong enough to survive it; you can thrive beyond it.',
-    copingTip: 'Trauma-informed therapy (like EMDR or CBT) provides safe pathways to restore nervous system balance.'
+    copingTip: 'Trauma-informed professional counseling provides safe pathways to restore nervous system balance.'
   },
   {
     id: 'health',
@@ -97,7 +97,7 @@ export const CAUSES_DATA: CauseItem[] = [
     iconName: 'Smartphone',
     category: 'Digital',
     shortDescription: 'Constantly comparing your reality to filtered highlight reels.',
-    detailedExplanation: 'Algorithms amplify polished moments, triggering envy, inadequate feelings, and distorted realities.',
+    detailedExplanation: 'Curated online feeds highlight ideal moments, triggering envy, inadequate feelings, and distorted realities.',
     positiveAdvice: 'Social media is a curated stage, not real life. Unfollow accounts that induce self-doubt.',
     copingTip: 'Try a 24-hour digital detox each week and ground yourself in tangible real-world experiences.'
   },
@@ -262,7 +262,7 @@ export const SOLUTIONS_DATA: SolutionItem[] = [
     iconName: 'HeartHandshake',
     summary: 'Working with a certified therapist gives structured tools and safe support.',
     detailedGuide: [
-      'Therapists provide evidence-based strategies like CBT or humanistic therapy.',
+      'Therapists provide personalized strategies and compassionate, non-judgmental guidance.',
       'There is no shame in seeking guidance—it is a smart, proactive step for well-being.',
       'Explore local clinics, Tele-MANAS, or certified online therapy options.'
     ],

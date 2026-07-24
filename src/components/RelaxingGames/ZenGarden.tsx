@@ -100,26 +100,26 @@ export const ZenGarden: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-amber-100/80 via-orange-100/80 to-rose-100/80 dark:from-[#34121d] dark:via-[#2b0c16] dark:to-[#220a12] p-8 rounded-3xl border border-orange-200 dark:border-rose-900/60 shadow-xl space-y-6 text-center">
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="text-xl font-bold font-serif text-stone-900 dark:text-rose-100">
-            Digital Zen Sand Garden
+    <div className="bg-gradient-to-br from-[#F7F3E9] via-white to-[#F0EAD9] dark:from-[#0B1F2A] dark:via-[#0A1B25] dark:to-[#081620] p-6 sm:p-8 rounded-3xl border border-[#3FCDA8]/30 shadow-xl space-y-6 text-center text-[#0B1F2A] dark:text-[#F7F3E9] transition-colors">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
+            Digital Zen Sand Garden 🪴
           </h3>
-          <p className="text-xs text-stone-600 dark:text-rose-200/80">
+          <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
             Rake gentle lines in smooth sand, place pebbles, leaves, and cherry blossoms.
           </p>
         </div>
         <button
           onClick={clearGarden}
-          className="px-4 py-2 rounded-2xl bg-white dark:bg-[#381420] shadow-sm text-xs font-bold text-orange-800 dark:text-rose-200 flex items-center gap-1.5"
+          className="px-4 py-2 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 shadow-sm text-xs font-bold text-[#169375] dark:text-[#3FCDA8] flex items-center gap-1.5 flex-shrink-0"
         >
           <RotateCcw className="w-3.5 h-3.5" /> Reset Garden
         </button>
       </div>
 
       {/* Tool Selector */}
-      <div className="flex items-center justify-center gap-2">
+      <div className="flex flex-wrap items-center justify-center gap-2">
         {[
           { id: 'rake', label: 'Rake Sand 🧹' },
           { id: 'stone', label: 'Smooth Stone 🪨' },
@@ -129,10 +129,10 @@ export const ZenGarden: React.FC = () => {
           <button
             key={t.id}
             onClick={() => setActiveTool(t.id as typeof activeTool)}
-            className={`px-3.5 py-2 rounded-xl text-xs font-semibold transition-all ${
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
               activeTool === t.id
-                ? 'bg-orange-600 text-white shadow-md'
-                : 'bg-white dark:bg-[#381420] text-stone-700 dark:text-rose-200'
+                ? 'bg-[#3FCDA8] text-[#081620] shadow-md scale-102'
+                : 'bg-white dark:bg-[#0B1F2A] text-[#0B1F2A] dark:text-[#F7F3E9] border border-[#3FCDA8]/30 hover:bg-[#EAE4D3] dark:hover:bg-[#143345]'
             }`}
           >
             {t.label}
@@ -141,7 +141,7 @@ export const ZenGarden: React.FC = () => {
       </div>
 
       {/* Sand Canvas */}
-      <div className="relative w-full max-w-lg mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-orange-200 dark:border-rose-900/60">
+      <div className="relative w-full max-w-lg mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-[#3FCDA8]/40">
         <canvas
           ref={canvasRef}
           width={500}
@@ -168,3 +168,4 @@ export const ZenGarden: React.FC = () => {
     </div>
   );
 };
+
