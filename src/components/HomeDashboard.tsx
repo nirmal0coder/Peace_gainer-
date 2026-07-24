@@ -15,103 +15,113 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({ onNavigate, openSo
   const featureTasks = [
     {
       id: 'aichat',
-      title: 'AI Companion & Voice Notes 🤖',
+      title: 'AI Companion & Voice Notes',
       tagline: 'Gentle Empathy Companion',
       description: 'Confidential AI counselor that listens with empathy and speaks in soothing voice notes tailored to your preference.',
       icon: <Bot className="w-6 h-6 text-[#3FCDA8]" />,
-      badge: 'Interactive AI & Voice ✨',
+      badge: 'Interactive AI & Voice',
       badgeColor: 'bg-[#3FCDA8]/20 text-[#3FCDA8] border border-[#3FCDA8]/40',
-      buttonText: 'Talk to Peace AI 🤖',
+      buttonText: 'Talk to Peace AI',
     },
     {
       id: 'yoga',
-      title: 'Yoga for Depression 🧘',
+      title: 'Yoga for Depression',
       tagline: 'Mind-Body Healing',
       description: 'Scientifically backed postures, step-by-step procedures with illustrations, breathing patterns, and hold timers.',
       icon: <Activity className="w-6 h-6 text-[#3FCDA8]" />,
-      badge: '8 Poses + Hold Timers 🫁',
+      badge: '8 Poses + Hold Timers',
       badgeColor: 'bg-[#3FCDA8]/20 text-[#3FCDA8] border border-[#3FCDA8]/40',
-      buttonText: 'Explore Yoga Poses 🧘',
+      buttonText: 'Explore Yoga Poses',
     },
     {
       id: 'about',
-      title: 'Understanding Depression 🧠',
+      title: 'Understanding Depression',
       tagline: 'Mental Health Guide',
       description: 'Learn about clinical symptoms, dismantle societal myths, and evaluate your emotional state with gentle self-checkers.',
       icon: <Brain className="w-6 h-6 text-[#8B85C4]" />,
-      badge: 'Myths vs Facts & Quiz 🌿',
+      badge: 'Myths vs Facts & Quiz',
       badgeColor: 'bg-[#8B85C4]/20 text-[#8B85C4] border border-[#8B85C4]/40',
-      buttonText: 'Learn About Symptoms 🧠',
+      buttonText: 'Learn About Symptoms',
     },
     {
       id: 'causes',
-      title: 'Causes & Triggers Explorer 🔍',
+      title: 'Causes & Triggers Explorer',
       tagline: 'Identify Root Factors',
       description: 'Discover biological, psychological, environmental, and stress factors that contribute to emotional burnout.',
       icon: <Search className="w-6 h-6 text-[#F2A65A]" />,
-      badge: 'Trigger Logger 🌿',
+      badge: 'Trigger Logger',
       badgeColor: 'bg-[#F2A65A]/20 text-[#F2A65A] border border-[#F2A65A]/40',
-      buttonText: 'Explore Triggers 🔍',
+      buttonText: 'Explore Triggers',
     },
     {
       id: 'solutions',
-      title: 'Solutions & Recovery Goals 🧭',
+      title: 'Solutions & Recovery Goals',
       tagline: 'Evidence-Based Paths',
       description: 'Structured coping techniques, positive mindset exercises, lifestyle adjustments, and an interactive goal tracker for small wins.',
       icon: <Compass className="w-6 h-6 text-[#3FCDA8]" />,
-      badge: 'Action Goal Setter ✨',
+      badge: 'Action Goal Setter',
       badgeColor: 'bg-[#3FCDA8]/20 text-[#3FCDA8] border border-[#3FCDA8]/40',
-      buttonText: 'View Recovery Plans 🧭',
+      buttonText: 'View Recovery Plans',
     },
     {
       id: 'toolkit',
-      title: 'Self-Help Interactive Suite 🛠️',
+      title: 'Self-Help Interactive Suite',
       tagline: 'Daily Wellness Suite',
-      description: 'Breathing timer 🌬️, Mood Tracker with weekly analytics, Gratitude Journal, Affirmation Cards, and Nature Sound Mixer.',
+      description: 'Breathing timer, Mood Tracker with weekly analytics, Gratitude Journal, Affirmation Cards, and Nature Sound Mixer.',
       icon: <Wrench className="w-6 h-6 text-[#F2A65A]" />,
-      badge: '7 Wellness Tools 🌿',
+      badge: '7 Wellness Tools',
       badgeColor: 'bg-[#F2A65A]/20 text-[#F2A65A] border border-[#F2A65A]/40',
-      buttonText: 'Open Self Help Suite 🛠️',
+      buttonText: 'Open Self Help Suite',
     },
     {
       id: 'games',
-      title: 'Relaxing Games Arcade 🎮',
+      title: 'Relaxing Games Arcade',
       tagline: 'Instant Anxiety Relief',
       description: '10 soothing mini-games including Bubble Pop, Zen Sand Garden, Memory Match, Color Harmony, and Mandala Coloring.',
       icon: <Gamepad2 className="w-6 h-6 text-[#8B85C4]" />,
-      badge: '10 Soothing Games 🌙',
+      badge: '10 Soothing Games',
       badgeColor: 'bg-[#8B85C4]/20 text-[#8B85C4] border border-[#8B85C4]/40',
-      buttonText: 'Play Relaxing Games 🎮',
+      buttonText: 'Play Relaxing Games',
+    },
+    {
+      id: 'reviews',
+      title: 'Community Reviews & Ratings',
+      tagline: 'Member Reflections',
+      description: 'Read genuine community experiences, leave star ratings, and share feedback on your mental wellness journey.',
+      icon: <Sparkles className="w-6 h-6 text-[#3FCDA8]" />,
+      badge: '4.9 Star Rating',
+      badgeColor: 'bg-[#3FCDA8]/20 text-[#3FCDA8] border border-[#3FCDA8]/40',
+      buttonText: 'Read & Leave Reviews',
     },
     {
       id: 'positivity',
-      title: 'Daily Positivity & Stories 🌟',
+      title: 'Daily Positivity & Stories',
       tagline: 'Uplifting Hope Hub',
       description: 'Inspirational quotes generator, personal recovery stories, daily gratitude prompts, and uplifting reflections.',
       icon: <Sparkles className="w-6 h-6 text-[#F2A65A]" />,
-      badge: 'Quotes & Hope 🌿',
+      badge: 'Quotes & Hope',
       badgeColor: 'bg-[#F2A65A]/20 text-[#F2A65A] border border-[#F2A65A]/40',
-      buttonText: 'Read Uplifting Stories 🌟',
+      buttonText: 'Read Uplifting Stories',
     },
     {
       id: 'emergency',
-      title: '24/7 Crisis & Emergency Support 🛡️',
+      title: '24/7 Crisis & Emergency Support',
       tagline: 'Immediate Helpline & Safety',
       description: 'Direct call link to Tele-MANAS (14416), 5-4-3-2-1 Grounding exercise, emergency contacts, and safety plan builder.',
       icon: <ShieldAlert className="w-6 h-6 text-rose-400" />,
-      badge: 'Tele-MANAS 14416 Helpline 🆘',
+      badge: 'Tele-MANAS 14416 Helpline',
       badgeColor: 'bg-rose-950 text-rose-200 border border-rose-800 font-bold',
-      buttonText: 'Get Emergency Support 🛡️',
+      buttonText: 'Get Emergency Support',
     },
     {
       id: 'contact',
-      title: 'Contact & Feedback Desk ✉️',
+      title: 'Contact & Feedback Desk',
       tagline: 'Support & Community',
       description: 'Send feedback, reach out to our team, review user testimonials, and access verified helpline references.',
       icon: <Mail className="w-6 h-6 text-[#8B85C4]" />,
-      badge: 'Support Desk ✨',
+      badge: 'Support Desk',
       badgeColor: 'bg-[#8B85C4]/20 text-[#8B85C4] border border-[#8B85C4]/40',
-      buttonText: 'Contact Support Desk ✉️',
+      buttonText: 'Contact Support Desk',
     },
   ];
 
@@ -131,7 +141,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({ onNavigate, openSo
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-[#0F2836] text-[#169375] dark:text-[#3FCDA8] border border-[#3FCDA8]/30 text-xs font-bold uppercase tracking-wider">
             <Heart className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" />
-            <span>Peace Gainer Wellness Sanctuary 🕊️</span>
+            <span>Peace Gainer Wellness Sanctuary</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
@@ -202,7 +212,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({ onNavigate, openSo
           <div className="space-y-2 text-center md:text-left relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#3FCDA8]/20 text-[#169375] dark:text-[#3FCDA8] text-xs font-bold">
               <Volume2 className="w-4 h-4 animate-pulse text-[#169375] dark:text-[#3FCDA8]" />
-              <span>Ambient Nature Audio 🌬️</span>
+              <span>Ambient Nature Audio</span>
             </div>
             <h3 className="text-2xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">Need Quick Peaceful Relaxation Right Now?</h3>
             <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 max-w-xl">
@@ -212,10 +222,10 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({ onNavigate, openSo
 
           <button
             onClick={openSoundMixer}
-            className="px-6 py-3.5 rounded-2xl bg-[#3FCDA8] text-[#081620] font-bold text-xs sm:text-sm shadow-lg hover:bg-[#33b895] transition-transform active:scale-95 flex items-center gap-2 flex-shrink-0 relative z-10"
+            className="px-6 py-3.5 rounded-2xl bg-[#3FCDA8] text-[#081620] font-bold text-xs sm:text-sm shadow-lg hover:bg-[#33b895] transition-transform active:scale-95 flex items-center gap-2 flex-shrink-0 relative z-10 cursor-pointer"
           >
             <Volume2 className="w-4 h-4 text-[#081620]" />
-            <span>Open Ambient Sound Mixer 🌬️</span>
+            <span>Open Ambient Sound Mixer</span>
           </button>
         </div>
       </section>

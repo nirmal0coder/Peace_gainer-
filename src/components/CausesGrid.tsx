@@ -54,13 +54,13 @@ export const CausesGrid: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-[#0F2836] text-[#169375] dark:text-[#3FCDA8] border border-[#3FCDA8]/30 text-xs font-bold uppercase tracking-wider">
             <Lightbulb className="w-4 h-4 text-[#F2A65A]" />
-            <span>Understanding Triggers & Roots 🔍🌱</span>
+            <span>Understanding Triggers & Roots</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
-            Reasons Behind Emotional Strain 💡
+            Reasons Behind Emotional Strain
           </h2>
           <p className="text-base sm:text-lg text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
-            Depression can stem from complex personal, environmental, or physiological pressures. Recognizing what you face empowers you to gently heal 🌿🕊️.
+            Depression can stem from complex personal, environmental, or physiological pressures. Recognizing what you face empowers you to gently heal.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export const CausesGrid: React.FC = () => {
             <Search className="w-4 h-4 absolute left-3.5 top-3.5 text-[#169375] dark:text-[#3FCDA8]/60" />
             <input
               type="text"
-              placeholder="Search triggers (e.g. sleep, work)... 🔍"
+              placeholder="Search triggers (e.g. sleep, work)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-white dark:bg-[#0F2836] border border-[#3FCDA8]/30 text-xs sm:text-sm text-[#0B1F2A] dark:text-[#F7F3E9] placeholder-[#1C2D37]/40 dark:placeholder-[#F7F3E9]/40 focus:outline-none focus:ring-2 focus:ring-[#3FCDA8]"
@@ -135,7 +135,7 @@ export const CausesGrid: React.FC = () => {
 
               {/* Positive Advice Snapshot */}
               <div className="mt-6 pt-4 border-t border-[#3FCDA8]/20 flex items-center justify-between text-xs font-bold text-[#169375] dark:text-[#3FCDA8]">
-                <span>View Gentle Insight 🌿</span>
+                <span>View Gentle Insight</span>
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
@@ -150,9 +150,9 @@ export const CausesGrid: React.FC = () => {
             </p>
             <button
               onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
-              className="mt-4 px-4 py-2 rounded-xl bg-[#3FCDA8] text-[#081620] text-xs font-bold"
+              className="mt-4 px-4 py-2 rounded-xl bg-[#3FCDA8] text-[#081620] text-xs font-bold cursor-pointer"
             >
-              Reset Filters 🔄
+              Reset Filters
             </button>
           </div>
         )}
@@ -177,7 +177,7 @@ export const CausesGrid: React.FC = () => {
               </div>
               <div>
                 <span className="text-xs font-bold text-[#F2A65A] uppercase tracking-wider">
-                  {activeModalCause.category} Trigger 🏷️
+                  {activeModalCause.category} Trigger
                 </span>
                 <h3 className="text-2xl font-serif font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
                   {activeModalCause.title}
@@ -188,7 +188,7 @@ export const CausesGrid: React.FC = () => {
             <div className="space-y-4">
               <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] text-[#1C2D37] dark:text-[#F7F3E9]/90 text-sm leading-relaxed border border-[#3FCDA8]/20">
                 <span className="font-semibold block mb-1 text-[#0B1F2A] dark:text-[#F7F3E9]">
-                  Why It Affects Mood 🧠:
+                  Why It Affects Mood:
                 </span>
                 {activeModalCause.detailedExplanation}
               </div>
@@ -196,14 +196,14 @@ export const CausesGrid: React.FC = () => {
               <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#F2A65A]/40 text-[#1C2D37] dark:text-[#F7F3E9] text-sm leading-relaxed space-y-2">
                 <div className="flex items-center gap-2 font-bold text-[#F2A65A]">
                   <Lightbulb className="w-4 h-4 text-[#F2A65A]" />
-                  <span>Compassionate Guidance 🕊️:</span>
+                  <span>Compassionate Guidance:</span>
                 </div>
                 <p className="text-[#1C2D37]/90 dark:text-[#F7F3E9]/80">{activeModalCause.positiveAdvice}</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/40 text-[#1C2D37] dark:text-[#F7F3E9] text-sm leading-relaxed space-y-1">
                 <span className="font-bold block text-[#169375] dark:text-[#3FCDA8]">
-                  🌱 Gentle Action Step:
+                  Gentle Action Step:
                 </span>
                 <p className="text-[#1C2D37]/90 dark:text-[#F7F3E9]/80">{activeModalCause.copingTip}</p>
               </div>
@@ -211,9 +211,9 @@ export const CausesGrid: React.FC = () => {
 
             <button
               onClick={() => setActiveModalCause(null)}
-              className="w-full py-3 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-sm shadow-md transition-colors"
+              className="w-full py-3 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-sm shadow-md transition-colors cursor-pointer"
             >
-              I Understand & Keep Going 🌿
+              I Understand & Keep Going
             </button>
 
           </div>

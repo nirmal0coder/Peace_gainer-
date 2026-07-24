@@ -5,11 +5,11 @@ export const EmergencyHelp: React.FC = () => {
   const [activeGroundingStep, setActiveGroundingStep] = useState(0);
 
   const groundingSteps = [
-    { count: '5', title: '5 Things You Can SEE 👁️', desc: 'Look around you right now. Notice 5 objects, colors, or shapes in your room.', icon: <Eye className="w-5 h-5 text-[#169375] dark:text-[#3FCDA8]" /> },
-    { count: '4', title: '4 Things You Can TOUCH 🖐️', desc: 'Feel the fabric of your clothes, the smooth table, or your feet on the ground.', icon: <Hand className="w-5 h-5 text-[#F2A65A]" /> },
-    { count: '3', title: '3 Things You Can HEAR 👂', desc: 'Listen softly for distant sounds: wind, fan humming, or ambient birds.', icon: <Ear className="w-5 h-5 text-[#8B85C4]" /> },
-    { count: '2', title: '2 Things You Can SMELL 🌸', desc: 'Notice scent in the air, soap, tea, or take a deep breath in through your nose.', icon: <Sparkles className="w-5 h-5 text-[#169375] dark:text-[#3FCDA8]" /> },
-    { count: '1', title: '1 Good Thing About YOU 🕊️', desc: 'Acknowledge 1 strength: "I am taking gentle steps to care for myself today."', icon: <Heart className="w-5 h-5 text-rose-500" /> }
+    { count: '5', title: '5 Things You Can SEE', desc: 'Look around you right now. Notice 5 objects, colors, or shapes in your room.', icon: <Eye className="w-5 h-5 text-[#169375] dark:text-[#3FCDA8]" /> },
+    { count: '4', title: '4 Things You Can TOUCH', desc: 'Feel the fabric of your clothes, the smooth table, or your feet on the ground.', icon: <Hand className="w-5 h-5 text-[#F2A65A]" /> },
+    { count: '3', title: '3 Things You Can HEAR', desc: 'Listen softly for distant sounds: wind, fan humming, or ambient birds.', icon: <Ear className="w-5 h-5 text-[#8B85C4]" /> },
+    { count: '2', title: '2 Things You Can SMELL', desc: 'Notice scent in the air, soap, tea, or take a deep breath in through your nose.', icon: <Sparkles className="w-5 h-5 text-[#169375] dark:text-[#3FCDA8]" /> },
+    { count: '1', title: '1 Good Thing About YOU', desc: 'Acknowledge 1 strength: "I am taking gentle steps to care for myself today."', icon: <Heart className="w-5 h-5 text-rose-500" /> }
   ];
 
   return (
@@ -29,7 +29,7 @@ export const EmergencyHelp: React.FC = () => {
           <div className="space-y-4 relative z-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 text-xs font-bold uppercase tracking-wider backdrop-blur-md text-[#169375] dark:text-[#3FCDA8]">
               <ShieldAlert className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8] animate-pulse" />
-              <span>Immediate Support Available 24/7 🕊️💖</span>
+              <span>Immediate Support Available 24/7</span>
             </div>
 
             <h2 className="text-2xl sm:text-4xl font-serif font-bold leading-tight text-[#0B1F2A] dark:text-[#F7F3E9]">
@@ -37,7 +37,7 @@ export const EmergencyHelp: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 max-w-2xl font-sans">
-              Free, confidential, and compassionate mental health support is available at any time of day or night 📞.
+              Free, confidential, and compassionate mental health support is available at any time of day or night.
             </p>
           </div>
 
@@ -46,13 +46,13 @@ export const EmergencyHelp: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#F2A65A]">
-                  Government of India Tele-MANAS Helpline 🇮🇳
+                  Government of India Tele-MANAS Helpline
                 </span>
                 <div className="text-2xl sm:text-4xl font-extrabold font-mono tracking-wider mt-1 text-[#169375] dark:text-[#3FCDA8]">
-                  ☎️ 14416 <span className="text-sm font-sans font-normal text-[#0B1F2A]/80 dark:text-[#F7F3E9]/80">or</span> 1-800-89-14416
+                  14416 <span className="text-sm font-sans font-normal text-[#0B1F2A]/80 dark:text-[#F7F3E9]/80">or</span> 1-800-89-14416
                 </div>
                 <p className="text-xs text-[#1C2D37]/70 dark:text-[#F7F3E9]/70 mt-1">
-                  Free 24/7 tele-mental health services in multiple regional languages across India 🗣️.
+                  Free 24/7 tele-mental health services in multiple regional languages across India.
                 </p>
               </div>
 
@@ -62,7 +62,7 @@ export const EmergencyHelp: React.FC = () => {
                 className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-base shadow-xl flex items-center justify-center gap-2.5 transition-transform transform hover:scale-105 active:scale-95 flex-shrink-0"
               >
                 <PhoneCall className="w-5 h-5 text-[#081620] animate-bounce" />
-                <span>Call Now (14416) 📞</span>
+                <span>Call Now (14416)</span>
               </a>
             </div>
           </div>
@@ -74,13 +74,13 @@ export const EmergencyHelp: React.FC = () => {
           <div className="text-center space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F7F3E9] dark:bg-[#0B1F2A] text-[#169375] dark:text-[#3FCDA8] border border-[#3FCDA8]/30 text-xs font-bold">
               <LifeBuoy className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" />
-              <span>Instant Panic & Anxiety Grounding ⚓</span>
+              <span>Instant Panic & Anxiety Grounding</span>
             </div>
             <h3 className="text-2xl font-serif font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
-              5-4-3-2-1 Grounding Technique 🧘‍♂️
+              5-4-3-2-1 Grounding Technique
             </h3>
             <p className="text-xs text-[#1C2D37]/70 dark:text-[#F7F3E9]/70">
-              When panic or heavy anxiety strikes, anchor your awareness back into the safety of the present moment 🕊️.
+              When panic or heavy anxiety strikes, anchor your awareness back into the safety of the present moment.
             </p>
           </div>
 

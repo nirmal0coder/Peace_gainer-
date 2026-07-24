@@ -30,13 +30,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const navLinks = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Depression' },
+    { id: 'about', label: 'About' },
     { id: 'causes', label: 'Causes' },
     { id: 'solutions', label: 'Solutions' },
-    { id: 'yoga', label: 'Yoga & Mind 🧘' },
-    { id: 'aichat', label: 'AI Companion 🤖' },
+    { id: 'yoga', label: 'Yoga & Mind' },
+    { id: 'aichat', label: 'AI Companion' },
     { id: 'toolkit', label: 'Self Help' },
     { id: 'games', label: 'Relaxing Games' },
+    { id: 'reviews', label: 'Reviews' },
     { id: 'positivity', label: 'Daily Positivity' },
     { id: 'emergency', label: 'Emergency Help', highlight: true },
     { id: 'contact', label: 'Contact' }
@@ -52,10 +53,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   const particlesList: { id: BackgroundParticleType; label: string; icon: React.ReactNode }[] = [
-    { id: 'leaves', label: 'Peace Leaves 🌿', icon: <Leaf className="w-4 h-4 text-[#3FCDA8]" /> },
-    { id: 'butterflies', label: 'Aurora Butterflies ✨', icon: <Sparkles className="w-4 h-4 text-[#F2A65A]" /> },
-    { id: 'clouds', label: 'Breathing Clouds 🌬️', icon: <Cloud className="w-4 h-4 text-[#8B85C4]" /> },
-    { id: 'orbs', label: 'Stillness Orbs 🌙', icon: <Disc className="w-4 h-4 text-[#3FCDA8]" /> },
+    { id: 'leaves', label: 'Peace Leaves', icon: <Leaf className="w-4 h-4 text-[#3FCDA8]" /> },
+    { id: 'butterflies', label: 'Aurora Butterflies', icon: <Sparkles className="w-4 h-4 text-[#F2A65A]" /> },
+    { id: 'clouds', label: 'Breathing Clouds', icon: <Cloud className="w-4 h-4 text-[#8B85C4]" /> },
+    { id: 'orbs', label: 'Stillness Orbs', icon: <Disc className="w-4 h-4 text-[#3FCDA8]" /> },
     { id: 'none', label: 'Clean Canvas', icon: <EyeOff className="w-4 h-4 text-stone-400" /> }
   ];
 
@@ -97,18 +98,18 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Light / Dark Mode Toggle */}
             <button
               onClick={toggleTheme}
-              title={theme === 'light' ? 'Switch to Dark Mode 🌙' : 'Switch to Light Mode ☀️'}
+              title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
               className="p-2 sm:px-3 sm:py-2 rounded-xl bg-white dark:bg-[#0F2836] text-[#0B1F2A] dark:text-[#F7F3E9] hover:bg-[#EAE4D3] dark:hover:bg-[#143345] border border-[#3FCDA8]/30 flex items-center gap-1.5 text-xs font-semibold transition-all shadow-sm"
             >
               {theme === 'light' ? (
                 <>
                   <Moon className="w-4 h-4 text-[#8B85C4]" />
-                  <span className="hidden md:inline">Dark 🌙</span>
+                  <span className="hidden md:inline">Dark</span>
                 </>
               ) : (
                 <>
                   <Sun className="w-4 h-4 text-[#F2A65A]" />
-                  <span className="hidden md:inline">Light ☀️</span>
+                  <span className="hidden md:inline">Light</span>
                 </>
               )}
             </button>
@@ -116,11 +117,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Sound Mixer */}
             <button
               onClick={openSoundMixer}
-              title="Ambient Nature Sounds 🌬️"
+              title="Ambient Nature Sounds"
               className="p-2 sm:px-3 sm:py-2 rounded-xl bg-white dark:bg-[#0F2836] text-[#0B1F2A] dark:text-[#F7F3E9] hover:bg-[#EAE4D3] dark:hover:bg-[#143345] border border-[#3FCDA8]/30 flex items-center gap-1.5 text-xs font-semibold transition-all shadow-sm"
             >
               <Volume2 className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8] animate-pulse" />
-              <span className="hidden md:inline">Sounds 🌬️</span>
+              <span className="hidden md:inline">Sounds</span>
             </button>
 
             {/* Particle Selector */}
@@ -131,13 +132,13 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="p-2 sm:px-3 sm:py-2 rounded-xl bg-white dark:bg-[#0F2836] text-[#0B1F2A] dark:text-[#F7F3E9] hover:bg-[#EAE4D3] dark:hover:bg-[#143345] border border-[#F2A65A]/40 flex items-center gap-1.5 text-xs font-semibold transition-all shadow-sm"
               >
                 <Sparkles className="w-4 h-4 text-[#F2A65A]" />
-                <span className="hidden md:inline">Atmosphere ✨</span>
+                <span className="hidden md:inline">Atmosphere</span>
               </button>
 
               {particleDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-56 rounded-2xl bg-white dark:bg-[#0F2836] shadow-2xl border border-[#3FCDA8]/30 p-2 z-50">
                   <div className="text-[10px] font-bold text-[#F2A65A] uppercase tracking-wider px-3 py-1">
-                    Atmosphere Background ✨
+                    Atmosphere Background
                   </div>
                   {particlesList.map((p) => (
                     <button

@@ -13,6 +13,8 @@ import { DailyPositivity } from './components/DailyPositivity';
 import { EmergencyHelp } from './components/EmergencyHelp';
 import { ContactSection } from './components/ContactSection';
 import { YogaDepression } from './components/YogaDepression';
+import { ReviewSection } from './components/ReviewSection';
+import { ExitReviewModal } from './components/ExitReviewModal';
 import { Footer } from './components/Footer';
 import { Mascot } from './components/Mascot';
 import { FloatingAiWidget } from './components/FloatingAiWidget';
@@ -34,7 +36,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      if (hash && ['home', 'about', 'causes', 'solutions', 'yoga', 'aichat', 'toolkit', 'games', 'positivity', 'emergency', 'contact'].includes(hash)) {
+      if (hash && ['home', 'about', 'causes', 'solutions', 'yoga', 'aichat', 'toolkit', 'games', 'reviews', 'positivity', 'emergency', 'contact'].includes(hash)) {
         setActivePage(hash);
       }
     };
@@ -247,7 +249,22 @@ export default function App() {
           </div>
         )}
 
-        {/* PAGE 10: CONTACT & FEEDBACK */}
+        {/* PAGE 10: REVIEWS & COMMUNITY FEEDBACK */}
+        {activePage === 'reviews' && (
+          <div className="pb-16 animate-fadeIn">
+            <PageHeader
+              title="Community Reviews & Member Ratings"
+              subtitle="Honest reflections, star ratings, and feedback from members finding solace and strength with Peace Gainer."
+              category="Community Feedback"
+              icon={<Sparkles className="w-6 h-6 text-[#3FCDA8]" />}
+              onGoHome={() => navigateToPage('home')}
+              onNavigate={navigateToPage}
+            />
+            <ReviewSection />
+          </div>
+        )}
+
+        {/* PAGE 11: CONTACT & FEEDBACK */}
         {activePage === 'contact' && (
           <div className="pb-16 animate-fadeIn">
             <PageHeader
@@ -272,6 +289,9 @@ export default function App() {
 
       {/* Omnipresent Floating AI Bot Launcher */}
       <FloatingAiWidget onOpenAi={() => navigateToPage('aichat')} activePage={activePage} />
+
+      {/* Exit Intent Review Modal */}
+      <ExitReviewModal />
 
       {/* Ambient Sound Mixer Drawer/Modal */}
       {isSoundMixerOpen && (

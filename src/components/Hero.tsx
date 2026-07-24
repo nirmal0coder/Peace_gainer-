@@ -13,10 +13,10 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onNeedHelp, onMoodSe
   const [selectedQuickMood, setSelectedQuickMood] = useState<string | null>(null);
 
   const quickMoods = [
-    { id: 'calm', label: 'Calm & Peaceful 🌿', icon: <Sun className="w-4 h-4 text-[#3FCDA8]" />, bg: 'bg-[#0F2836] hover:bg-[#143345] border-[#3FCDA8]/30 text-[#F7F3E9]' },
-    { id: 'okay', label: 'Holding Up 🌬️', icon: <Meh className="w-4 h-4 text-[#8B85C4]" />, bg: 'bg-[#0F2836] hover:bg-[#143345] border-[#8B85C4]/30 text-[#F7F3E9]' },
-    { id: 'anxious', label: 'Feeling Anxious ✨', icon: <Wind className="w-4 h-4 text-[#F2A65A]" />, bg: 'bg-[#0F2836] hover:bg-[#143345] border-[#F2A65A]/30 text-[#F7F3E9]' },
-    { id: 'sad', label: 'Overwhelmed 🌙', icon: <Frown className="w-4 h-4 text-rose-300" />, bg: 'bg-[#0F2836] hover:bg-[#143345] border-rose-400/30 text-[#F7F3E9]' }
+    { id: 'calm', label: 'Calm & Peaceful', icon: <Sun className="w-4 h-4 text-[#3FCDA8]" />, bg: 'bg-[#0F2836] hover:bg-[#143345] border-[#3FCDA8]/30 text-[#F7F3E9]' },
+    { id: 'okay', label: 'Holding Up', icon: <Meh className="w-4 h-4 text-[#8B85C4]" />, bg: 'bg-[#0F2836] hover:bg-[#143345] border-[#8B85C4]/30 text-[#F7F3E9]' },
+    { id: 'anxious', label: 'Feeling Anxious', icon: <Wind className="w-4 h-4 text-[#F2A65A]" />, bg: 'bg-[#0F2836] hover:bg-[#143345] border-[#F2A65A]/30 text-[#F7F3E9]' },
+    { id: 'sad', label: 'Overwhelmed', icon: <Frown className="w-4 h-4 text-rose-300" />, bg: 'bg-[#0F2836] hover:bg-[#143345] border-rose-400/30 text-[#F7F3E9]' }
   ];
 
   const handleQuickMoodClick = (id: string) => {
@@ -45,7 +45,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onNeedHelp, onMoodSe
             {/* Encouraging Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-[#0F2836] text-[#169375] dark:text-[#3FCDA8] border border-[#3FCDA8]/30 text-xs sm:text-sm font-semibold shadow-inner">
               <Sparkles className="w-4 h-4 text-[#F2A65A]" />
-              <span>A Compassionate Haven for Emotional Peace & Serenity 🕊️</span>
+              <span>A Compassionate Haven for Emotional Peace & Serenity</span>
             </div>
 
             {/* Main Headline with Serif Font */}
@@ -53,39 +53,39 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onNeedHelp, onMoodSe
               You Matter. <br className="hidden sm:inline" />
               Your Peace Matters. <br />
               <span className="text-[#169375] dark:text-[#3FCDA8]">
-                Breathe · Return · Grow 🕊️
+                Breathe · Return · Grow
               </span>
             </h1>
 
             {/* Subheading */}
             <p className="text-base sm:text-xl text-[#1C2D37]/80 dark:text-[#F7F3E9]/75 font-sans max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Gentle steps every day lead to lasting emotional equilibrium. You are never alone.
-              Explore self-guided breathing practices 🌬️, confidential AI voice notes ✨, yoga postures 🌿, and relaxing mini-games 🌙.
+              Explore self-guided breathing practices, confidential AI voice notes, yoga postures, and relaxing mini-games.
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <button
                 onClick={onStartJourney}
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-base shadow-lg shadow-[#3FCDA8]/20 flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-base shadow-lg shadow-[#3FCDA8]/20 flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
               >
-                <span>Begin Gentle Journey 🌿</span>
+                <span>Begin Gentle Journey</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
 
               <button
                 onClick={onNeedHelp}
-                className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-rose-100 dark:bg-[#0F2836] text-rose-800 dark:text-rose-200 font-bold text-base border border-rose-300 dark:border-rose-800/80 hover:bg-rose-200 dark:hover:bg-[#143345] shadow-sm flex items-center justify-center gap-2 transition-all"
+                className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-rose-100 dark:bg-[#0F2836] text-rose-800 dark:text-rose-200 font-bold text-base border border-rose-300 dark:border-rose-800/80 hover:bg-rose-200 dark:hover:bg-[#143345] shadow-sm flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
                 <ShieldAlert className="w-5 h-5 text-rose-600 dark:text-rose-400" />
-                <span>24/7 Emergency Support 🆘</span>
+                <span>24/7 Emergency Support</span>
               </button>
             </div>
 
             {/* Quick Mood Check-In Bar */}
             <div className="pt-6 border-t border-[#3FCDA8]/20">
               <p className="text-xs sm:text-sm font-semibold text-[#0B1F2A]/90 dark:text-[#F7F3E9]/80 mb-3">
-                How is your spirit feeling in this moment? ✨
+                How is your spirit feeling in this moment?
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 max-w-lg mx-auto lg:mx-0">
                 {quickMoods.map((m) => (

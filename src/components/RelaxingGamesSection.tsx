@@ -20,19 +20,19 @@ export const RelaxingGamesSection: React.FC = () => {
   >('bubble');
 
   const games = [
-    { id: 'bubble', label: 'Bubble Pop 🫧', icon: <Smile className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" /> },
-    { id: 'popit', label: 'Pop-It Fidget 🔘', icon: <Layers className="w-4 h-4 text-[#F2A65A]" /> },
-    { id: 'water', label: 'Water Ripples 🌊', icon: <Droplets className="w-4 h-4 text-[#38BDF8]" /> },
-    { id: 'petals', label: 'Lotus Plucker 🌸', icon: <Flower2 className="w-4 h-4 text-[#F472B6]" /> },
-    { id: 'color', label: 'Color Matching 🎨', icon: <Palette className="w-4 h-4 text-[#8B85C4]" /> },
-    { id: 'memory', label: 'Memory Match 🌿', icon: <Flower2 className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" /> },
-    { id: 'zen', label: 'Zen Garden 🪴', icon: <Sun className="w-4 h-4 text-[#F2A65A]" /> },
-    { id: 'mandala', label: 'Mandala 💫', icon: <Sparkles className="w-4 h-4 text-[#8B85C4]" /> },
-    { id: 'stress', label: 'Stress Sphere 🎈', icon: <Heart className="w-4 h-4 text-rose-500" /> },
-    { id: 'breathing', label: 'Breathing Bubble 🌬️', icon: <ShieldCheck className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" /> },
-    { id: 'puzzle', label: 'Tile Puzzle 🧩', icon: <Gamepad2 className="w-4 h-4 text-[#8B85C4]" /> },
-    { id: 'focus', label: 'Focus Challenge 👁️', icon: <Eye className="w-4 h-4 text-[#F2A65A]" /> },
-    { id: 'mixer', label: 'Soundboard 🎧', icon: <Volume2 className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" /> }
+    { id: 'bubble', label: 'Bubble Pop', icon: <Smile className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" /> },
+    { id: 'popit', label: 'Pop-It Fidget', icon: <Layers className="w-4 h-4 text-[#F2A65A]" /> },
+    { id: 'water', label: 'Water Ripples', icon: <Droplets className="w-4 h-4 text-[#38BDF8]" /> },
+    { id: 'petals', label: 'Lotus Plucker', icon: <Flower2 className="w-4 h-4 text-[#F472B6]" /> },
+    { id: 'color', label: 'Color Matching', icon: <Palette className="w-4 h-4 text-[#8B85C4]" /> },
+    { id: 'memory', label: 'Memory Match', icon: <Flower2 className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" /> },
+    { id: 'zen', label: 'Zen Garden', icon: <Sun className="w-4 h-4 text-[#F2A65A]" /> },
+    { id: 'mandala', label: 'Mandala', icon: <Sparkles className="w-4 h-4 text-[#8B85C4]" /> },
+    { id: 'stress', label: 'Stress Sphere', icon: <Heart className="w-4 h-4 text-rose-500" /> },
+    { id: 'breathing', label: 'Breathing Bubble', icon: <ShieldCheck className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" /> },
+    { id: 'puzzle', label: 'Tile Puzzle', icon: <Gamepad2 className="w-4 h-4 text-[#8B85C4]" /> },
+    { id: 'focus', label: 'Focus Challenge', icon: <Eye className="w-4 h-4 text-[#F2A65A]" /> },
+    { id: 'mixer', label: 'Soundboard', icon: <Volume2 className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" /> }
   ] as const;
 
   return (
@@ -47,13 +47,13 @@ export const RelaxingGamesSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-[#0F2836] text-[#169375] dark:text-[#3FCDA8] border border-[#3FCDA8]/30 text-xs font-bold uppercase tracking-wider">
             <Gamepad2 className="w-4 h-4 text-[#169375] dark:text-[#3FCDA8]" />
-            <span>Stress-Reduction Arcade 🎮✨</span>
+            <span>Stress-Reduction Arcade</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
-            Soothing Relaxing Games 🧩🎯
+            Soothing Relaxing Games
           </h2>
           <p className="text-base sm:text-lg text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
-            Gentle browser games designed with soothing visuals, soft audio feedback, and zero score pressure 🕊️.
+            Gentle browser games designed with soothing visuals, soft audio feedback, and zero score pressure.
           </p>
         </div>
 

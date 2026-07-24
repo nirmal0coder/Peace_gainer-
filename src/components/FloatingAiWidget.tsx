@@ -26,13 +26,13 @@ export const FloatingAiWidget: React.FC<FloatingAiWidgetProps> = ({ onOpenAi, ac
             <X className="w-3 h-3" />
           </button>
           
-          <div className="w-7 h-7 rounded-full bg-[#3FCDA8] flex items-center justify-center text-[#081620] flex-shrink-0 shadow-md font-bold text-xs">
-            🤖
+          <div className="w-7 h-7 rounded-full bg-[#3FCDA8] flex items-center justify-center text-[#081620] flex-shrink-0 shadow-md">
+            <Bot className="w-4 h-4 text-[#081620]" />
           </div>
           
           <div className="leading-tight">
             <p className="text-[11px] font-bold text-[#169375] dark:text-[#3FCDA8]">Need someone to talk to?</p>
-            <p className="text-[10px] text-[#1C2D37]/70 dark:text-[#F7F3E9]/70">Peace AI Bot is online 24/7 🕊️</p>
+            <p className="text-[10px] text-[#1C2D37]/70 dark:text-[#F7F3E9]/70">Peace AI Bot is online 24/7</p>
           </div>
         </div>
       )}
@@ -40,15 +40,15 @@ export const FloatingAiWidget: React.FC<FloatingAiWidgetProps> = ({ onOpenAi, ac
       {/* Floating Action AI Button */}
       <button
         onClick={onOpenAi}
-        className="px-4 py-3 rounded-full bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] shadow-2xl border-2 border-[#0B1F2A] flex items-center gap-2.5 font-bold text-xs tracking-wide transform hover:scale-105 active:scale-95 transition-all group"
+        className="px-4 py-3 rounded-full bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] shadow-2xl border-2 border-[#0B1F2A] flex items-center gap-2.5 font-bold text-xs tracking-wide transform hover:scale-105 active:scale-95 transition-all group cursor-pointer"
         title="Quick Launch Peace AI Bot"
       >
         <div className="relative">
           <Bot className="w-5 h-5 text-[#081620] group-hover:rotate-12 transition-transform" />
           <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#F2A65A] border border-[#081620] animate-ping" />
         </div>
-        <span className="hidden sm:inline">Ask Peace AI Bot 🤖</span>
-        <span className="sm:hidden">AI Bot 🤖</span>
+        <span className="hidden sm:inline">Ask Peace AI Bot</span>
+        <span className="sm:hidden">AI Bot</span>
         <Sparkles className="w-3.5 h-3.5 text-[#081620] animate-pulse" />
       </button>
 

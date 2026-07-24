@@ -13,7 +13,7 @@ export const AIChatBot: React.FC = () => {
     {
       id: 'welcome-1',
       role: 'assistant',
-      text: "Hello, my dear friend. I'm Peace Buddy, your personal AI stress-relief companion 🕊️. I'm here to listen without judgment and help you find deep emotional calm. How is your spirit feeling right now?",
+      text: "Hello, my dear friend. I'm Peace Buddy, your personal AI stress-relief companion. I'm here to listen without judgment and help you find deep emotional calm. How is your spirit feeling right now?",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     }
   ]);
@@ -72,7 +72,7 @@ export const AIChatBot: React.FC = () => {
       });
 
       const data = await res.json();
-      const aiReplyText = data.text || "Take a deep, gentle breath in... and let it out softly 🌬️. I am right beside you. Share whatever is resting on your heart.";
+      const aiReplyText = data.text || "Take a deep, gentle breath in... and let it out softly. I am right beside you. Share whatever is resting on your heart.";
 
       const aiMsg: ChatMessage = {
         id: (Date.now() + 1).toString(),
@@ -94,7 +94,7 @@ export const AIChatBot: React.FC = () => {
       const fallbackMsg: ChatMessage = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        text: "I am right here with you 🌿. Take a slow, comforting breath. Remember that you are safe, valued, and supported.",
+        text: "I am right here with you. Take a slow, comforting breath. Remember that you are safe, valued, and supported.",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         voiceName: preferredVoice,
       };
@@ -192,11 +192,11 @@ export const AIChatBot: React.FC = () => {
   };
 
   const quickPrompts = [
-    { text: "I feel overwhelmed by my workload 😫", label: "Work Overwhelm" },
-    { text: "How do I calm racing thoughts before sleep? 🌙", label: "Racing Thoughts" },
-    { text: "I feel sudden panic and chest tightness 🫁", label: "Panic Relief" },
-    { text: "Give me a 2-minute positivity exercise ✨", label: "2-Min Exercise" },
-    { text: "I'm feeling lonely and unmotivated today 🌧️", label: "Feeling Down" }
+    { text: "I feel overwhelmed by my workload", label: "Work Overwhelm" },
+    { text: "How do I calm racing thoughts before sleep?", label: "Racing Thoughts" },
+    { text: "I feel sudden panic and chest tightness", label: "Panic Relief" },
+    { text: "Give me a 2-minute positivity exercise", label: "2-Min Exercise" },
+    { text: "I'm feeling lonely and unmotivated today", label: "Feeling Down" }
   ];
 
   return (
@@ -211,7 +211,7 @@ export const AIChatBot: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F2836] text-[#3FCDA8] border border-[#3FCDA8]/30 text-xs font-bold uppercase tracking-wider">
             <Bot className="w-4 h-4 text-[#3FCDA8] animate-pulse" />
-            <span>AI Mental Wellness Companion 🕊️</span>
+            <span>AI Mental Wellness Companion</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#F7F3E9]">
@@ -236,9 +236,9 @@ export const AIChatBot: React.FC = () => {
 
               <div className="flex flex-wrap gap-2">
                 {[
-                  { id: 'male', label: '👨 Male User (Voice: Lovely Female)', voice: 'Kore (Female)' },
-                  { id: 'female', label: '👩 Female User (Voice: Lovely Male)', voice: 'Puck (Male)' },
-                  { id: 'non-binary', label: '🌈 Custom Voice', voice: 'Zephyr (Soothing)' }
+                  { id: 'male', label: 'Male User (Voice: Lovely Female)', voice: 'Kore (Female)' },
+                  { id: 'female', label: 'Female User (Voice: Lovely Male)', voice: 'Puck (Male)' },
+                  { id: 'non-binary', label: 'Custom Voice', voice: 'Zephyr (Soothing)' }
                 ].map((g) => (
                   <button
                     key={g.id}
@@ -267,11 +267,11 @@ export const AIChatBot: React.FC = () => {
                 onChange={(e) => setPreferredVoice(e.target.value as VoiceOption)}
                 className="w-full md:w-auto px-3.5 py-2 rounded-2xl bg-[#0B1F2A] text-[#F7F3E9] text-xs font-bold border border-[#3FCDA8]/30 focus:outline-none"
               >
-                <option value="Kore">🌸 Kore (Soothing Female)</option>
-                <option value="Zephyr">✨ Zephyr (Warm Female)</option>
-                <option value="Puck">🍀 Puck (Gentle Male)</option>
-                <option value="Fenrir">🌊 Fenrir (Calm Male)</option>
-                <option value="Charon">🌿 Charon (Soft Male)</option>
+                <option value="Kore">Kore (Soothing Female)</option>
+                <option value="Zephyr">Zephyr (Warm Female)</option>
+                <option value="Puck">Puck (Gentle Male)</option>
+                <option value="Fenrir">Fenrir (Calm Male)</option>
+                <option value="Charon">Charon (Soft Male)</option>
               </select>
             </div>
 
@@ -372,7 +372,7 @@ export const AIChatBot: React.FC = () => {
                         ) : (
                           <>
                             <Volume2 className="w-3.5 h-3.5 text-[#3FCDA8]" />
-                            <span>Play Lovely Voice Note 🎧</span>
+                            <span>Play Voice Note</span>
                           </>
                         )}
                       </button>

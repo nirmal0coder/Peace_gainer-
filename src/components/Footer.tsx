@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 className="px-4 py-2 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-xs shadow-md flex items-center gap-2 transition-transform transform active:scale-95"
               >
                 <Bot className="w-4 h-4 text-[#081620] animate-pulse" />
-                <span>AI Companion Chatbot 🤖</span>
+                <span>AI Companion Chatbot</span>
               </button>
             </div>
           </div>
@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="hover:text-[#3FCDA8] transition-colors flex items-center gap-2 text-[#F7F3E9] font-bold group"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#3FCDA8] group-hover:scale-125 transition-transform" />
-                  <span>Talk to Peace AI Bot 🤖</span>
+                  <span>Talk to Peace AI Bot</span>
                   <span className="px-1.5 py-0.5 rounded-md bg-[#0F2836] border border-[#3FCDA8]/30 text-[10px] text-[#3FCDA8] font-mono font-bold">24/7 AI</span>
                 </button>
               </li>
@@ -67,7 +67,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#F2A65A] group-hover:scale-125 transition-transform" />
                   <Activity className="w-3.5 h-3.5 text-[#F2A65A]" />
-                  <span>Yoga for Depression 🧘</span>
+                  <span>Yoga for Depression</span>
                   <span className="px-1.5 py-0.5 rounded-md bg-[#0F2836] border border-[#3FCDA8]/30 text-[10px] text-[#3FCDA8] font-mono font-bold">NEW</span>
                 </button>
               </li>
@@ -97,9 +97,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-[#F2A65A] uppercase tracking-wider flex items-center gap-1.5">
               <Brain className="w-4 h-4 text-[#3FCDA8]" />
-              <span>Guides & Inspiration</span>
+              <span>Guides & Community</span>
             </h4>
             <ul className="space-y-2 text-xs">
+              <li>
+                <button
+                  onClick={() => handleLinkClick('reviews')}
+                  className="hover:text-[#3FCDA8] transition-colors flex items-center gap-2 text-[#3FCDA8] font-bold"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-[#3FCDA8]" />
+                  <span>Reviews & Ratings</span>
+                </button>
+              </li>
               <li>
                 <button
                   onClick={() => handleLinkClick('about')}
@@ -271,7 +280,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               onClick={() => setModalType(null)}
               className="w-full py-3 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-xs shadow-md"
             >
-              I Understand 🕊️
+              I Understand
             </button>
           </div>
         </div>

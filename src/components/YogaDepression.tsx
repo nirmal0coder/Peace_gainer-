@@ -568,13 +568,13 @@ export const YogaDepression: React.FC = () => {
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3FCDA8]/20 text-[#169375] dark:text-[#3FCDA8] text-xs font-bold uppercase tracking-wider">
               <Sun className="w-4 h-4 text-[#F2A65A]" />
-              <span>Pranayama Healing Breathwork 🫁✨</span>
+              <span>Pranayama Healing Breathwork</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#0B1F2A] dark:text-[#F7F3E9]">
-              3 Powerful Breathing Techniques for Depression 🌿
+              3 Powerful Breathing Techniques for Depression
             </h3>
             <p className="text-xs sm:text-sm text-[#1C2D37]/80 dark:text-[#F7F3E9]/80">
-              Pranayama breath control directly regulates autonomic brain rhythms and calms overstimulated nervous pathways 🕊️.
+              Pranayama breath control directly regulates autonomic brain rhythms and calms overstimulated nervous pathways.
             </p>
           </div>
 
@@ -582,39 +582,39 @@ export const YogaDepression: React.FC = () => {
             <div className="p-5 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-3">
               <div className="flex items-center gap-2 font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
                 <span className="w-7 h-7 rounded-xl bg-[#3FCDA8] text-[#081620] flex items-center justify-center font-bold">1</span>
-                <span>Anulom Vilom (Alternate Nostril) 🧘‍♀️</span>
+                <span>Anulom Vilom (Alternate Nostril)</span>
               </div>
               <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
                 Balancing right and left brain hemispheres. Inhale through left nostril (4s), exhale through right (4s), then inhale right and exhale left. Repeat for 5 minutes.
               </p>
               <div className="text-[11px] font-bold text-[#169375] dark:text-[#3FCDA8]">
-                ✨ Benefit: Calms anxiety & restores cognitive balance 🧠
+                Benefit: Calms anxiety & restores cognitive balance
               </div>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-3">
               <div className="flex items-center gap-2 font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
                 <span className="w-7 h-7 rounded-xl bg-[#F2A65A] text-[#081620] flex items-center justify-center font-bold">2</span>
-                <span>Bhramari (Humming Bee Breath) 🐝</span>
+                <span>Bhramari (Humming Bee Breath)</span>
               </div>
               <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
                 Inhale deeply, gently place thumbs on ears and fingers over eyes. Exhale slowly making a low humming bee sound in your throat. Repeat 7–10 times.
               </p>
               <div className="text-[11px] font-bold text-[#F2A65A]">
-                ✨ Benefit: Releases brain stress & tension headaches 🌸
+                Benefit: Releases brain stress & tension headaches
               </div>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#F7F3E9] dark:bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-3">
               <div className="flex items-center gap-2 font-bold text-[#0B1F2A] dark:text-[#F7F3E9]">
                 <span className="w-7 h-7 rounded-xl bg-[#8B85C4] text-white flex items-center justify-center font-bold">3</span>
-                <span>Diaphragmatic Belly Breathing 🎈</span>
+                <span>Diaphragmatic Belly Breathing</span>
               </div>
               <p className="text-[#1C2D37]/80 dark:text-[#F7F3E9]/80 leading-relaxed">
                 Place one hand on chest and one on belly. Inhale through nose allowing belly to expand outward like a balloon, exhale allowing belly to gently sink.
               </p>
               <div className="text-[11px] font-bold text-[#8B85C4]">
-                ✨ Benefit: Activates parasympathetic deep relaxation 🌊
+                Benefit: Activates parasympathetic deep relaxation
               </div>
             </div>
           </div>
@@ -625,13 +625,13 @@ export const YogaDepression: React.FC = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-[#3FCDA8]/20 pb-6">
             <div>
               <span className="text-xs font-mono font-bold text-[#F2A65A] uppercase tracking-widest block">
-                Recommended Daily Practice ☀️
+                Recommended Daily Practice
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold font-serif text-[#F7F3E9]">
-                15-Minute Anti-Depression Daily Flow 🧘‍♂️
+                15-Minute Anti-Depression Daily Flow
               </h3>
               <p className="text-xs sm:text-sm text-[#F7F3E9]/80 mt-1">
-                Follow this simple daily sequence every morning or whenever emotional exhaustion sets in 🕊️.
+                Follow this simple daily sequence every morning or whenever emotional exhaustion sets in.
               </p>
             </div>
 
@@ -640,32 +640,32 @@ export const YogaDepression: React.FC = () => {
               className="px-5 py-3 rounded-2xl bg-[#3FCDA8] text-[#081620] font-bold text-xs hover:bg-[#33b895] transition-all shadow-md flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-[#081620]" />
-              <span>Talk to Peace AI Bot 🤖</span>
+              <span>Talk to Peace AI Bot</span>
             </a>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs font-medium">
             <div className="p-4 rounded-2xl bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
-              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">00:00 - 03:00 (3 mins) ⏱️</span>
-              <h4 className="font-bold text-sm text-[#F7F3E9]">1. Balasana (Child Pose) 👶</h4>
+              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">00:00 - 03:00 (3 mins)</span>
+              <h4 className="font-bold text-sm text-[#F7F3E9]">1. Balasana (Child Pose)</h4>
               <p className="text-[#F7F3E9]/70 text-[11px]">Grounding & calming immediate panic and anxiety.</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
-              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">03:00 - 07:00 (4 mins) ⏱️</span>
-              <h4 className="font-bold text-sm text-[#F7F3E9]">2. Cobra & Crescent Lunge 🐍</h4>
+              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">03:00 - 07:00 (4 mins)</span>
+              <h4 className="font-bold text-sm text-[#F7F3E9]">2. Cobra & Crescent Lunge</h4>
               <p className="text-[#F7F3E9]/70 text-[11px]">Heart opening, chest expansion & energizing body.</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
-              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">07:00 - 11:00 (4 mins) ⏱️</span>
-              <h4 className="font-bold text-sm text-[#F7F3E9]">3. Viparita Karani (Legs Up Wall) 🧱</h4>
+              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">07:00 - 11:00 (4 mins)</span>
+              <h4 className="font-bold text-sm text-[#F7F3E9]">3. Viparita Karani (Legs Up Wall)</h4>
               <p className="text-[#F7F3E9]/70 text-[11px]">Restorative inversion lowering systemic stress.</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#0B1F2A] border border-[#3FCDA8]/30 space-y-1">
-              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">11:00 - 15:00 (4 mins) ⏱️</span>
-              <h4 className="font-bold text-sm text-[#F7F3E9]">4. Savasana & Pranayama 🌊</h4>
+              <span className="text-[#F2A65A] font-mono font-bold text-[11px]">11:00 - 15:00 (4 mins)</span>
+              <h4 className="font-bold text-sm text-[#F7F3E9]">4. Savasana & Pranayama</h4>
               <p className="text-[#F7F3E9]/70 text-[11px]">Deep neural integration and alternate nostril breathing.</p>
             </div>
           </div>

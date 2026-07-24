@@ -30,7 +30,7 @@ export const Mascot: React.FC = () => {
 
           <div className="flex items-center gap-1.5 text-xs font-bold text-[#169375] dark:text-[#3FCDA8]">
             <Sparkles className="w-4 h-4 text-[#F2A65A]" />
-            <span>Peace Buddy says: 🕊️</span>
+            <span>Peace Buddy says:</span>
           </div>
 
           <p className="text-xs font-medium leading-relaxed italic text-[#1C2D37] dark:text-[#F7F3E9]/90">
@@ -39,9 +39,9 @@ export const Mascot: React.FC = () => {
 
           <button
             onClick={handleNextTip}
-            className="w-full py-1.5 rounded-xl bg-[#F7F3E9] dark:bg-[#0B1F2A] text-[#0B1F2A] dark:text-[#F7F3E9] border border-[#3FCDA8]/30 font-bold text-[11px] hover:bg-[#EAE4D3] dark:hover:bg-[#143345] transition-colors flex items-center justify-center gap-1"
+            className="w-full py-1.5 rounded-xl bg-[#F7F3E9] dark:bg-[#0B1F2A] text-[#0B1F2A] dark:text-[#F7F3E9] border border-[#3FCDA8]/30 font-bold text-[11px] hover:bg-[#EAE4D3] dark:hover:bg-[#143345] transition-colors flex items-center justify-center gap-1 cursor-pointer"
           >
-            <span>Next Tip ✨</span>
+            <span>Next Tip</span>
             <ChevronRight className="w-3.5 h-3.5 text-[#169375] dark:text-[#3FCDA8]" />
           </button>
         </div>
