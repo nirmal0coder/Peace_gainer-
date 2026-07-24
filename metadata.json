@@ -1,0 +1,6 @@
+{
+  "name": "Peace Gainer",
+  "description": "A soothing mental wellness platform with self-help tools, interactive relaxing games, ambient sound generator, mood tracking, and emergency support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
