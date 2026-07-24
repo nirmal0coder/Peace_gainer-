@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import {
   Sun, Moon, Volume2, PhoneCall, Menu, X, Sparkles, Heart,
-  Leaf, Cloud, Disc, EyeOff, ShieldAlert, Activity, Bot
+  Leaf, Cloud, Disc, EyeOff, ShieldAlert, Activity, Bot, Palette
 } from 'lucide-react';
-import { ThemeMode, BackgroundParticleType } from '../types';
+import { ThemeMode, BackgroundParticleType, GlobalThemeId } from '../types';
 import { PeaceGainerLogo } from './PeaceGainerLogo';
+import { GLOBAL_THEMES } from '../utils/themePalettes';
 
 interface NavbarProps {
   theme: ThemeMode;
   toggleTheme: () => void;
+  globalTheme: GlobalThemeId;
+  setGlobalTheme: (id: GlobalThemeId) => void;
   particleType: BackgroundParticleType;
   setParticleType: (type: BackgroundParticleType) => void;
   openSoundMixer: () => void;
@@ -19,6 +22,8 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({
   theme,
   toggleTheme,
+  globalTheme,
+  setGlobalTheme,
   particleType,
   setParticleType,
   openSoundMixer,
@@ -27,6 +32,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [particleDropdownOpen, setParticleDropdownOpen] = useState(false);
+  const [themeDropdownOpen, setThemeDropdownOpen] = useState(false);
+
+  const globalThemesList = Object.values(GLOBAL_THEMES);
+  const activeThemeConfig = GLOBAL_THEMES[globalTheme] || GLOBAL_THEMES.emerald;
 
   const navLinks = [
     { id: 'home', label: 'Home' },
@@ -94,6 +103,55 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Action Buttons */}
           <div className="flex items-center gap-2">
+
+            {/* Global Color Theme Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => {
+                  setThemeDropdownOpen(!themeDropdownOpen);
+                  setParticleDropdownOpen(false);
+                }}
+                title="Change Page & Color Theme"
+                className="p-2 sm:px-3 sm:py-2 rounded-xl bg-white dark:bg-[#0F2836] text-[#0B1F2A] dark:text-[#F7F3E9] hover:bg-[#EAE4D3] dark:hover:bg-[#143345] border border-[#3FCDA8]/40 flex items-center gap-1.5 text-xs font-semibold transition-all shadow-sm cursor-pointer"
+              >
+                <Palette className="w-4 h-4 text-[#3FCDA8]" />
+                <span className="hidden md:inline">Theme</span>
+                <span className="text-[11px] font-bold">{activeThemeConfig.icon}</span>
+              </button>
+
+              {themeDropdownOpen && (
+                <div className="absolute right-0 mt-2 w-64 rounded-2xl bg-white dark:bg-[#0F2836] shadow-2xl border border-[#3FCDA8]/30 p-2 z-50">
+                  <div className="text-[10px] font-bold text-[#169375] dark:text-[#3FCDA8] uppercase tracking-wider px-3 py-1 flex items-center justify-between">
+                    <span>Page Color Theme</span>
+                    <span className="text-xs">{activeThemeConfig.icon}</span>
+                  </div>
+                  <div className="space-y-1 mt-1">
+                    {globalThemesList.map((t) => (
+                      <button
+                        key={t.id}
+                        onClick={() => {
+                          setGlobalTheme(t.id);
+                          setThemeDropdownOpen(false);
+                        }}
+                        className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs text-left transition-colors cursor-pointer ${
+                          globalTheme === t.id
+                            ? 'bg-[#3FCDA8] text-[#081620] font-bold shadow-sm'
+                            : 'text-[#1C2D37] dark:text-[#F7F3E9]/80 hover:bg-[#EAE4D3] dark:hover:bg-[#143345] hover:text-[#0B1F2A] dark:hover:text-[#F7F3E9]'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="text-base">{t.icon}</span>
+                          <div>
+                            <div className="font-bold">{t.name}</div>
+                            <div className="text-[10px] opacity-80 font-normal truncate max-w-[150px]">{t.description}</div>
+                          </div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Light / Dark Mode Toggle */}
             <button

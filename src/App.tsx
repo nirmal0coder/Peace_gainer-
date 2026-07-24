@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ThemeMode, BackgroundParticleType } from './types';
+import { ThemeMode, BackgroundParticleType, GlobalThemeId } from './types';
+import { applyGlobalTheme } from './utils/themePalettes';
 import { Navbar } from './components/Navbar';
 import { HomeDashboard } from './components/HomeDashboard';
 import { PageHeader } from './components/PageHeader';
@@ -27,6 +28,13 @@ import {
 
 export default function App() {
   const [theme, setTheme] = useState<ThemeMode>('light');
+  const [globalTheme, setGlobalTheme] = useState<GlobalThemeId>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('peace_gainer_global_theme');
+      if (saved) return saved as GlobalThemeId;
+    }
+    return 'emerald';
+  });
   const [particleType, setParticleType] = useState<BackgroundParticleType>('leaves');
   const [isSoundMixerOpen, setIsSoundMixerOpen] = useState(false);
   const [activePage, setActivePage] = useState<string>('home');
@@ -46,14 +54,18 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  // Sync theme with document HTML class
+  // Sync theme mode & palette with document HTML class and body background
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
-  }, [theme]);
+    applyGlobalTheme(globalTheme, theme);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('peace_gainer_global_theme', globalTheme);
+    }
+  }, [theme, globalTheme]);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
@@ -96,6 +108,8 @@ export default function App() {
       <Navbar
         theme={theme}
         toggleTheme={toggleTheme}
+        globalTheme={globalTheme}
+        setGlobalTheme={setGlobalTheme}
         particleType={particleType}
         setParticleType={setParticleType}
         openSoundMixer={() => setIsSoundMixerOpen(true)}
@@ -108,10 +122,13 @@ export default function App() {
         
         {/* PAGE 1: HOME DASHBOARD HUB */}
         {activePage === 'home' && (
-          <HomeDashboard
-            onNavigate={navigateToPage}
-            openSoundMixer={() => setIsSoundMixerOpen(true)}
-          />
+          <div className="animate-fadeIn">
+            <HomeDashboard
+              onNavigate={navigateToPage}
+              openSoundMixer={() => setIsSoundMixerOpen(true)}
+              globalTheme={globalTheme}
+            />
+          </div>
         )}
 
         {/* PAGE 2: AI COMPANION & VOICE NOTES */}
@@ -124,6 +141,8 @@ export default function App() {
               icon={<Bot className="w-6 h-6 text-emerald-500" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <AIChatBot />
           </div>
@@ -139,6 +158,8 @@ export default function App() {
               icon={<Brain className="w-6 h-6 text-sky-500" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <AboutDepression />
           </div>
@@ -154,6 +175,8 @@ export default function App() {
               icon={<Search className="w-6 h-6 text-purple-500" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <CausesGrid />
           </div>
@@ -169,6 +192,8 @@ export default function App() {
               icon={<Compass className="w-6 h-6 text-teal-500" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <SolutionsSection onGoalAdded={() => navigateToPage('toolkit')} />
           </div>
@@ -184,6 +209,8 @@ export default function App() {
               icon={<Activity className="w-6 h-6 text-rose-500" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <YogaDepression />
           </div>
@@ -199,6 +226,8 @@ export default function App() {
               icon={<Wrench className="w-6 h-6 text-amber-500" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <SelfHelpToolkit />
           </div>
@@ -214,6 +243,8 @@ export default function App() {
               icon={<Gamepad2 className="w-6 h-6 text-indigo-500" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <RelaxingGamesSection />
           </div>
@@ -229,6 +260,8 @@ export default function App() {
               icon={<Sparkles className="w-6 h-6 text-pink-500" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <DailyPositivity />
           </div>
@@ -244,6 +277,8 @@ export default function App() {
               icon={<ShieldAlert className="w-6 h-6 text-rose-500" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <EmergencyHelp />
           </div>
@@ -259,6 +294,8 @@ export default function App() {
               icon={<Sparkles className="w-6 h-6 text-[#3FCDA8]" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <ReviewSection />
           </div>
@@ -271,9 +308,11 @@ export default function App() {
               title="Contact & Feedback Support Center"
               subtitle="Send us your questions, submit user feedback, view testimonials, and access helpline directory."
               category="Support Desk"
-              icon={<Mail className="w-6 h-6 text-slate-600 dark:text-slate-300" />}
+              icon={<Mail className="w-6 h-6 text-slate-600 dark:text-slate-[#F7F3E9]" />}
               onGoHome={() => navigateToPage('home')}
               onNavigate={navigateToPage}
+              currentTheme={globalTheme}
+              onSelectTheme={setGlobalTheme}
             />
             <ContactSection />
           </div>

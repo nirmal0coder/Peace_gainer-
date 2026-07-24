@@ -1,5 +1,7 @@
 export type ThemeMode = 'light' | 'dark';
 
+export type GlobalThemeId = 'emerald' | 'ocean' | 'lavender' | 'sunset' | 'cosmic' | 'zen';
+
 export type BackgroundParticleType = 'leaves' | 'butterflies' | 'clouds' | 'orbs' | 'none';
 
 export interface MoodEntry {

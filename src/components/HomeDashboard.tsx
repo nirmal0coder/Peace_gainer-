@@ -6,12 +6,15 @@ import {
 } from 'lucide-react';
 import { Hero } from './Hero';
 
+import { GlobalThemeId } from '../types';
+
 interface HomeDashboardProps {
   onNavigate: (pageId: string) => void;
   openSoundMixer: () => void;
+  globalTheme?: GlobalThemeId;
 }
 
-export const HomeDashboard: React.FC<HomeDashboardProps> = ({ onNavigate, openSoundMixer }) => {
+export const HomeDashboard: React.FC<HomeDashboardProps> = ({ onNavigate, openSoundMixer, globalTheme = 'emerald' }) => {
   const featureTasks = [
     {
       id: 'aichat',
@@ -133,6 +136,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({ onNavigate, openSo
         onStartJourney={() => onNavigate('toolkit')}
         onNeedHelp={() => onNavigate('emergency')}
         onMoodSelect={() => onNavigate('toolkit')}
+        globalTheme={globalTheme}
       />
 
       {/* Main Task / Page Selector Section */}

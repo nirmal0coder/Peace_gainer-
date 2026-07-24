@@ -1,16 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sparkles, Heart, ArrowRight, ShieldAlert, Smile, Frown, Meh, Sun, Wind, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PeaceGainerLogo } from './PeaceGainerLogo';
+import { GlobalThemeId } from '../types';
+import { GLOBAL_THEMES } from '../utils/themePalettes';
 
 interface HeroProps {
   onStartJourney: () => void;
   onNeedHelp: () => void;
   onMoodSelect: (mood: string) => void;
+  globalTheme?: GlobalThemeId;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onStartJourney, onNeedHelp, onMoodSelect }) => {
+export const Hero: React.FC<HeroProps> = ({ onStartJourney, onNeedHelp, onMoodSelect, globalTheme = 'emerald' }) => {
   const [selectedQuickMood, setSelectedQuickMood] = useState<string | null>(null);
+  const [activeThemeId, setActiveThemeId] = useState<GlobalThemeId>(globalTheme);
+
+  useEffect(() => {
+    setActiveThemeId(globalTheme);
+  }, [globalTheme]);
+
+  useEffect(() => {
+    const handleThemeChange = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      const newThemeId = customEvent.detail?.themeId as GlobalThemeId;
+      if (newThemeId && GLOBAL_THEMES[newThemeId]) {
+        setActiveThemeId(newThemeId);
+      }
+    };
+    window.addEventListener('peace_gainer_theme_changed', handleThemeChange);
+    return () => {
+      window.removeEventListener('peace_gainer_theme_changed', handleThemeChange);
+    };
+  }, []);
+
+  const activeTheme = GLOBAL_THEMES[activeThemeId] || GLOBAL_THEMES.emerald;
 
   const quickMoods = [
     { id: 'calm', label: 'Calm & Peaceful', icon: <Sun className="w-4 h-4 text-[#3FCDA8]" />, bg: 'bg-[#0F2836] hover:bg-[#143345] border-[#3FCDA8]/30 text-[#F7F3E9]' },
@@ -32,8 +56,11 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onNeedHelp, onMoodSe
   return (
     <div className="relative overflow-hidden py-12 sm:py-20 lg:py-24 bg-gradient-to-b from-[#F7F3E9] via-white to-[#F0EAD9] dark:from-[#0B1F2A] dark:via-[#0A1B25] dark:to-[#081620] border-b border-[#3FCDA8]/30 dark:border-[#3FCDA8]/20 transition-colors duration-300">
       
-      {/* Soft Radial Glow Backdrop in Aurora Teal */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3FCDA8]/12 rounded-full blur-[120px] pointer-events-none" />
+      {/* Dynamic Theme Radial Glow Backdrop */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[120px] pointer-events-none transition-colors duration-500"
+        style={{ backgroundColor: activeTheme.glowColor }}
+      />
       <div className="absolute top-10 right-1/4 w-80 h-80 bg-[#8B85C4]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -43,16 +70,17 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onNeedHelp, onMoodSe
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             
             {/* Encouraging Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-[#0F2836] text-[#169375] dark:text-[#3FCDA8] border border-[#3FCDA8]/30 text-xs sm:text-sm font-semibold shadow-inner">
+            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold shadow-inner ${activeTheme.badgeClass}`}>
               <Sparkles className="w-4 h-4 text-[#F2A65A]" />
               <span>A Compassionate Haven for Emotional Peace & Serenity</span>
+              <span className="ml-1 text-sm">{activeTheme.icon}</span>
             </div>
 
             {/* Main Headline with Serif Font */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#0B1F2A] dark:text-[#F7F3E9] tracking-tight leading-tight">
               You Matter. <br className="hidden sm:inline" />
               Your Peace Matters. <br />
-              <span className="text-[#169375] dark:text-[#3FCDA8]">
+              <span className={activeTheme.accentText}>
                 Breathe · Return · Grow
               </span>
             </h1>
@@ -67,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onNeedHelp, onMoodSe
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <button
                 onClick={onStartJourney}
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] text-[#081620] font-bold text-base shadow-lg shadow-[#3FCDA8]/20 flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                className={`w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-base shadow-lg flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer ${activeTheme.btnPrimary}`}
               >
                 <span>Begin Gentle Journey</span>
                 <ArrowRight className="w-5 h-5" />
