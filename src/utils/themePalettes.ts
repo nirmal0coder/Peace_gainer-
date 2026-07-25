@@ -37,8 +37,27 @@ export const GLOBAL_THEMES: Record<GlobalThemeId, GlobalThemeConfig> = {
     borderColor: 'border-[#3FCDA8]/30 dark:border-[#3FCDA8]/20',
     glowColor: 'rgba(63, 205, 168, 0.25)',
     heroGradientLight: 'from-emerald-50/80 via-teal-50/60 to-amber-50/50',
-    heroGradientDark: 'from-[#0B1F2A] via-[#0F2836] to-[#0A1B25]',
+    heroGradientDark: 'from-[#0B1F2A] via-[#0A1B25] to-[#081620]',
     activeTabClass: 'bg-[#3FCDA8] text-[#081620] font-bold shadow-md',
+  },
+  zen: {
+    id: 'zen',
+    name: 'Zen Garden',
+    icon: '🪴',
+    primaryHex: '#34D399',
+    hoverHex: '#059669',
+    secondaryHex: '#FBBF24',
+    accentBgLight: 'bg-teal-400/20 text-teal-800',
+    accentBgDark: 'dark:bg-teal-400/20 dark:text-teal-300',
+    description: 'Peaceful tea leaf & sage green for natural harmony',
+    badgeClass: 'bg-teal-100 text-teal-800 dark:bg-[#0D241E] dark:text-teal-300 border border-teal-300 dark:border-teal-500/40',
+    btnPrimary: 'bg-teal-400 hover:bg-teal-500 text-slate-950',
+    accentText: 'text-teal-800 dark:text-teal-300',
+    borderColor: 'border-teal-400/30 dark:border-teal-400/20',
+    glowColor: 'rgba(52, 211, 153, 0.25)',
+    heroGradientLight: 'from-teal-50/80 via-emerald-50/60 to-amber-50/50',
+    heroGradientDark: 'from-[#0A1F19] via-[#122E26] to-[#071612]',
+    activeTabClass: 'bg-teal-400 text-slate-950 font-bold shadow-md',
   },
   ocean: {
     id: 'ocean',
@@ -50,13 +69,13 @@ export const GLOBAL_THEMES: Record<GlobalThemeId, GlobalThemeConfig> = {
     accentBgLight: 'bg-sky-400/20 text-sky-700',
     accentBgDark: 'dark:bg-sky-400/20 dark:text-sky-300',
     description: 'Refreshing coastal azure for mental clarity & calm',
-    badgeClass: 'bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300 border border-sky-300 dark:border-sky-700/50',
+    badgeClass: 'bg-sky-100 text-sky-800 dark:bg-[#082032] dark:text-sky-300 border border-sky-300 dark:border-sky-500/40',
     btnPrimary: 'bg-sky-400 hover:bg-sky-500 text-slate-950',
     accentText: 'text-sky-700 dark:text-sky-300',
-    borderColor: 'border-sky-400/30 dark:border-sky-500/20',
+    borderColor: 'border-sky-400/30 dark:border-sky-400/20',
     glowColor: 'rgba(56, 189, 248, 0.25)',
     heroGradientLight: 'from-sky-50/80 via-cyan-50/60 to-emerald-50/50',
-    heroGradientDark: 'from-sky-950 via-slate-900 to-cyan-950',
+    heroGradientDark: 'from-[#082032] via-[#0F2B46] to-[#0D1F30]',
     activeTabClass: 'bg-sky-400 text-slate-950 font-bold shadow-md',
   },
   lavender: {
@@ -69,13 +88,13 @@ export const GLOBAL_THEMES: Record<GlobalThemeId, GlobalThemeConfig> = {
     accentBgLight: 'bg-purple-400/20 text-purple-700',
     accentBgDark: 'dark:bg-purple-400/20 dark:text-purple-300',
     description: 'Soothing amethyst & lilac for evening tranquility',
-    badgeClass: 'bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 border border-purple-300 dark:border-purple-700/50',
+    badgeClass: 'bg-purple-100 text-purple-800 dark:bg-[#1E1B2E] dark:text-purple-300 border border-purple-300 dark:border-purple-500/40',
     btnPrimary: 'bg-purple-400 hover:bg-purple-500 text-slate-950',
     accentText: 'text-purple-700 dark:text-purple-300',
-    borderColor: 'border-purple-400/30 dark:border-purple-500/20',
+    borderColor: 'border-purple-400/30 dark:border-purple-400/20',
     glowColor: 'rgba(192, 132, 252, 0.25)',
     heroGradientLight: 'from-purple-50/80 via-fuchsia-50/60 to-sky-50/50',
-    heroGradientDark: 'from-purple-950 via-slate-900 to-indigo-950',
+    heroGradientDark: 'from-[#1A1225] via-[#241935] to-[#120B1A]',
     activeTabClass: 'bg-purple-400 text-slate-950 font-bold shadow-md',
   },
   sunset: {
@@ -88,13 +107,13 @@ export const GLOBAL_THEMES: Record<GlobalThemeId, GlobalThemeConfig> = {
     accentBgLight: 'bg-amber-400/20 text-amber-800',
     accentBgDark: 'dark:bg-amber-400/20 dark:text-amber-300',
     description: 'Warm golden amber & coral comfort for heart warmth',
-    badgeClass: 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border border-amber-300 dark:border-amber-700/50',
+    badgeClass: 'bg-amber-100 text-amber-800 dark:bg-[#2A1810] dark:text-amber-300 border border-amber-300 dark:border-amber-500/40',
     btnPrimary: 'bg-amber-400 hover:bg-amber-500 text-slate-950',
     accentText: 'text-amber-800 dark:text-amber-300',
-    borderColor: 'border-amber-400/30 dark:border-amber-500/20',
+    borderColor: 'border-amber-400/30 dark:border-amber-400/20',
     glowColor: 'rgba(242, 166, 90, 0.25)',
     heroGradientLight: 'from-amber-50/80 via-orange-50/60 to-rose-50/50',
-    heroGradientDark: 'from-amber-950/90 via-stone-900 to-rose-950/90',
+    heroGradientDark: 'from-[#23120B] via-[#331C11] to-[#180A05]',
     activeTabClass: 'bg-amber-400 text-slate-950 font-bold shadow-md',
   },
   cosmic: {
@@ -107,33 +126,14 @@ export const GLOBAL_THEMES: Record<GlobalThemeId, GlobalThemeConfig> = {
     accentBgLight: 'bg-indigo-400/20 text-indigo-800',
     accentBgDark: 'dark:bg-indigo-400/20 dark:text-indigo-300',
     description: 'Deep sapphire & starry violet for deep quiet stillness',
-    badgeClass: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-700/50',
+    badgeClass: 'bg-indigo-100 text-indigo-800 dark:bg-[#121629] dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/40',
     btnPrimary: 'bg-indigo-400 hover:bg-indigo-500 text-slate-950',
     accentText: 'text-indigo-800 dark:text-indigo-300',
-    borderColor: 'border-indigo-400/30 dark:border-indigo-500/20',
+    borderColor: 'border-indigo-400/30 dark:border-indigo-400/20',
     glowColor: 'rgba(129, 140, 248, 0.25)',
     heroGradientLight: 'from-indigo-50/80 via-blue-50/60 to-pink-50/50',
-    heroGradientDark: 'from-slate-950 via-indigo-950/90 to-slate-900',
+    heroGradientDark: 'from-[#0E1328] via-[#181F3D] to-[#0A0D1E]',
     activeTabClass: 'bg-indigo-400 text-slate-950 font-bold shadow-md',
-  },
-  zen: {
-    id: 'zen',
-    name: 'Zen Garden',
-    icon: '🪴',
-    primaryHex: '#34D399',
-    hoverHex: '#059669',
-    secondaryHex: '#FBBF24',
-    accentBgLight: 'bg-teal-400/20 text-teal-800',
-    accentBgDark: 'dark:bg-teal-400/20 dark:text-teal-300',
-    description: 'Peaceful tea leaf & sage green for natural harmony',
-    badgeClass: 'bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300 border border-teal-300 dark:border-teal-700/50',
-    btnPrimary: 'bg-teal-400 hover:bg-teal-500 text-slate-950',
-    accentText: 'text-teal-800 dark:text-teal-300',
-    borderColor: 'border-teal-400/30 dark:border-teal-500/20',
-    glowColor: 'rgba(52, 211, 153, 0.25)',
-    heroGradientLight: 'from-teal-50/80 via-emerald-50/60 to-amber-50/50',
-    heroGradientDark: 'from-emerald-950/80 via-stone-900 to-teal-950/80',
-    activeTabClass: 'bg-teal-400 text-slate-950 font-bold shadow-md',
   },
 };
 
@@ -147,16 +147,16 @@ export function applyGlobalTheme(themeId: GlobalThemeId, mode: 'light' | 'dark')
   root.style.setProperty('--theme-primary-hover', t.hoverHex);
   root.style.setProperty('--theme-secondary', t.secondaryHex);
 
-  // Apply custom background radial gradient based on active theme
+  // Apply custom background radial gradient based on mode
   if (mode === 'dark') {
     document.body.style.backgroundImage = `
-      radial-gradient(circle at 50% 20%, ${t.primaryHex}28 0%, rgba(11, 31, 42, 0) 65%),
-      radial-gradient(circle at 80% 70%, ${t.secondaryHex}1E 0%, rgba(8, 22, 32, 0) 50%)
+      radial-gradient(circle at 50% 20%, ${t.primaryHex}15 0%, rgba(11, 31, 42, 0) 65%),
+      radial-gradient(circle at 80% 70%, ${t.secondaryHex}10 0%, rgba(11, 31, 42, 0) 50%)
     `;
   } else {
     document.body.style.backgroundImage = `
-      radial-gradient(circle at 50% 20%, ${t.primaryHex}35 0%, rgba(247, 243, 233, 0) 65%),
-      radial-gradient(circle at 80% 70%, ${t.secondaryHex}25 0%, rgba(247, 243, 233, 0) 50%)
+      radial-gradient(circle at 50% 20%, ${t.primaryHex}20 0%, rgba(247, 243, 233, 0) 65%),
+      radial-gradient(circle at 80% 70%, ${t.secondaryHex}15 0%, rgba(247, 243, 233, 0) 50%)
     `;
   }
 

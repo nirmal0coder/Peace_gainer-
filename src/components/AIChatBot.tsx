@@ -447,14 +447,14 @@ export const AIChatBot: React.FC = () => {
               <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
-                className="px-5 py-3.5 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] disabled:opacity-50 text-[#081620] font-bold text-xs shadow-md flex items-center gap-2 transition-transform transform active:scale-95"
+                className="px-5 py-3.5 rounded-2xl bg-[#3FCDA8] hover:bg-[#33b895] disabled:opacity-50 text-[#081620] font-bold text-xs shadow-md flex items-center gap-2 transition-transform transform active:scale-95 cursor-pointer"
               >
                 <span>Send</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
 
-            <div className="mt-2 text-center text-[10px] text-[#F7F3E9]/50">
+            <div className="mt-2 text-center text-[10px] text-amber-800/60 dark:text-amber-300/60">
               Peace AI is a supportive self-help tool. For medical emergency, call Tele-MANAS helpline at <strong>14416</strong>.
             </div>
           </div>

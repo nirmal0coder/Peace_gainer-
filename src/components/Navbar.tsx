@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  Sun, Moon, Volume2, PhoneCall, Menu, X, Sparkles, Heart,
+  Volume2, PhoneCall, Menu, X, Sparkles, Heart,
   Leaf, Cloud, Disc, EyeOff, ShieldAlert, Activity, Bot, Palette
 } from 'lucide-react';
 import { ThemeMode, BackgroundParticleType, GlobalThemeId } from '../types';
@@ -153,24 +153,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               )}
             </div>
 
-            {/* Light / Dark Mode Toggle */}
-            <button
-              onClick={toggleTheme}
-              title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-              className="p-2 sm:px-3 sm:py-2 rounded-xl bg-white dark:bg-[#0F2836] text-[#0B1F2A] dark:text-[#F7F3E9] hover:bg-[#EAE4D3] dark:hover:bg-[#143345] border border-[#3FCDA8]/30 flex items-center gap-1.5 text-xs font-semibold transition-all shadow-sm"
-            >
-              {theme === 'light' ? (
-                <>
-                  <Moon className="w-4 h-4 text-[#8B85C4]" />
-                  <span className="hidden md:inline">Dark</span>
-                </>
-              ) : (
-                <>
-                  <Sun className="w-4 h-4 text-[#F2A65A]" />
-                  <span className="hidden md:inline">Light</span>
-                </>
-              )}
-            </button>
             
             {/* Sound Mixer */}
             <button
